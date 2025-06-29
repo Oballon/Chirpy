@@ -3,6 +3,9 @@
 vendor
 Gemfile.lock
 
+# Container 
+.devcontainer
+
 # Jekyll cache
 .jekyll-cache
 .jekyll-metadata
