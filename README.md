@@ -1,9 +1,10 @@
 # 仓库说明
-.devcontainer文件夹已写进.gitignore中，若不用docker环境，clone后直接删除.devcontainer文件夹，git便不再追踪
+- .devcontainer文件夹已写进.gitignore中，若不用docker环境，clone后直接删除.devcontainer文件夹，git便不再追踪
 ```ignore
 # Container 
 .devcontainer
 ```
+-  Chirpy-starter自带的workflow有问题，修改后编译成功
 # Chirpy Starter
 
 [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
