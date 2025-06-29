@@ -7,10 +7,13 @@ pin: true
 ## 方案分析
 
 ### 介绍
-Github无需成本，允许用户免费建站
+Github无需成本，允许用户免费建站。
+[Jekyll](https://jekyllcn.com/)  为Github官方支持的静态网页生成器，可将Markdown文本转化为静态博客网站。
 
 
-网站编译特点：_config.yml配置需重新build，文章变动无需重新build
+### 关键文件介绍
+_config.yml：项目总体配置，更改需重新build，文章变动无需重新build
+index.html：
 
 工作区间目录功能：
 /commons：网站所需图片、文件等
