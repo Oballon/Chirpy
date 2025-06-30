@@ -8,7 +8,17 @@ pin: true
 
 ### 介绍
 Github无需成本，允许用户免费建站。
+
 [Jekyll](https://jekyllcn.com/)  为Github官方支持的静态网页生成器，可将Markdown文本转化为静态博客网站。
+
+Ruby为jekyll、bundle的编程语言，安装Ruby后执行以下指令即可安装jekyll、bundle
+```ruby
+gem install bundler jekyll
+```
+执行以下指令即可根据Gemfile安装项目所需的依赖
+```ruby
+bundle install
+```
 
 
 ### 关键文件介绍
