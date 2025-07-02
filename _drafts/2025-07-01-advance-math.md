@@ -438,8 +438,8 @@ $$\not\Leftrightarrow x\to a时，f(x)=A$$
 ## 极限四则运算前提及用法
 
 $$前提：极限均存在时，才可拆分运算$$
-$$\lim\limits_{x\to \infty}f(x)与\lim\limits_{x\to \infty}g(x)（x\to \infty的方式不同）\\
-存在+存在=存在\\
+<!-- $$\lim\limits_{x\to \infty}f(x)与\lim\limits_{x\to \infty}g(x)（x\to \infty的方式不同）$$ -->
+$$存在+存在=存在\\
 存在+不存在=不存在\\
 不存在+不存在=不确定（正负相消）\\
 （若同号，则极限不存在）$$
@@ -521,7 +521,7 @@ $$注意比阶的定义方式\\
 
 ## 抓大放小
 
-$$1.\ x\to \infty,\ \log_ax (a>1)\ll x^a(a>0) \ll a^x(a>1)\\
+$$1.\ x\to +\infty,\ \log_ax (a>1)\ll x^a(a>0) \ll a^x(a>1)\\
  2. 幂函数阶次\\
  3. 复杂极限分子、分母内部比阶\\
 \ \\
@@ -539,7 +539,7 @@ $$显式：
 ## 非零因子常数化
 （加减乘除，变上限积分）
 
-**关键在于不定式**
+<!-- **关键在于不定式** -->
 加减慎用；若无加减，乘除直接用
 
 **所给函数均连续**
@@ -550,7 +550,7 @@ $$非零因子常数化：\\
 ## 等价无穷小替换
 （加减乘除，复合函数，变上限积分）
 
-**关键在于不定式**
+<!-- **关键在于不定式** -->
 加减慎用；若无加减，乘除直接用、复合函数（复合函数各层均无穷小的前提下，由外向内替换）
 
 **所给函数均连续**
@@ -566,11 +566,10 @@ f(x)须等价于m阶无穷小，即\lim\limits_{x\to 0}\frac{f(x)}{ax^m}=1（ x^
 $$\frac{0}{0},\frac{\infty}{\infty},\infty-\infty,0\cdot\infty, 0^0,\infty^0,1^\infty$$
 
 **都向分式化归**
-$$少数情况是被动的：\\\lim\limits_{x\to \infty}x^2(\arctan\frac{1}{x}-\arctan\frac{1}{1+x})$$
-$$仅少数须拆分（泰勒首阶次无相消）：\\
-\lim\limits_{x\to0}\frac{\sqrt{\cos x}-\sqrt[3]{1+\sin^2x}}{(\arcsin x)^2}=\lim\limits_{x\to0}\frac{\sqrt{\cos x}-1-(\sqrt[3]{1+\sin^2x}-1)}{x^2}$$
+$$少数情况是被动的：\lim\limits_{x\to \infty}x^2(\arctan\frac{1}{x}-\arctan\frac{1}{1+x})$$
+$$仅少数须拆分（泰勒首阶次无相消）：\lim\limits_{x\to0}\frac{\sqrt{\cos x}-\sqrt[3]{1+\sin^2x}}{(\arcsin x)^2}=\lim\limits_{x\to0}\frac{\sqrt{\cos x}-1-(\sqrt[3]{1+\sin^2x}-1)}{x^2}$$
 $$1^\infty: \lim u^v=e^{\lim(u-1)v}；
-{\color{blue}对复合函数使用了非零因子常数化,整式可如此处理，分式谨慎}\\
+{\color{blue}对复合函数极限使用了非零因子常数化（误差可能放大）,整式可如此处理，分式谨慎}\\
 \lim\limits_{x\to +\infty}\frac{(1+\frac{1}{x})^{x^2}}{e^x}=e^{-\frac{1}{2}},\quad \lim\limits_{x\to +\infty}\frac{(1+\frac{1}{x})^{x^2}}{(1+\frac{1}{2x})^{2x^2}}=e^{-\frac{3}{8}} \quad （指数化）$$
 [Card#ID/1XS81#极限指数化与对数化]
 
@@ -4552,7 +4551,7 @@ $$x^2+(y-z)^2=(1-z)^2\quad 代入不同z，方程表示不同z处的圆\\
 
 极限、级数、反常积分收敛对比
 
-**子极限自变量趋向速度不一致**
+<!-- **子极限自变量趋向速度不一致** -->
 $$\begin{array}{lll}\lim\limits_{x\to \infty}f(x)+\lim\limits_{x\to \infty}g(x)&& \lim\limits_{x\to \infty}[f(x)+g(x)]&（收+收=收，收+发=发，发+发=不一定）\\
 \\
 \sum_{n=1}^\infty a_n+\sum_{n=1}^\infty b_n&&\sum_{n=1}^\infty (a_n+b_n)&（收+收=收，收+发=发，发+发=不一定）\\
