@@ -229,9 +229,9 @@ x=a\cos^3 t\\
 y=a\sin^3 t
 \end{array}
 \right.\quad 顶点距离原点为a$$
-![](pic-advance-math\Markji_1751354129262.png)
+<img src="pic-advance-math\Markji_1751354129262.png" width="30%">
 
-双纽线
+## 双纽线
 
 $$直角坐标：(x^2+y^2)^2=2a^2(x^2-y^2)\\
 极坐标：r^2=2a^2\cos2\theta$$
@@ -260,8 +260,7 @@ Y-\ln x=\frac{1}{x}(X-x)，代入点(x_0,y_0)，解x即可$$
 
 反三角函数是三角函数在特定区间的反函数
 $$y=\arcsin x, \ \ x\in[-1,1],y\in[-\frac{\pi}{2},\frac{\pi}{2}]$$
-$$\arcsin(\sin x)\neq x$$
-（未限制x定义域，左x不一定等于右x）
+$$\arcsin(\sin x)\neq x （未限制x定义域，左x不一定等于右x）$$
 $$\sin(\arcsin x)=x$$
 
 ## 隐函数与方程的关系
@@ -339,9 +338,9 @@ $f(x), f(-x)$
 
 ## 判断函数有界的三条结论
 
-$$f(x)在[a,b]上连续、单调\Rightarrow f(x)在[a,b]上有界$$
-$$f(x)在(a,b)，(-\infty,+\infty)内连续,且\lim\limits_{x\to a+,-\infty}f(x)\ \exist, \lim\limits_{x\to b^-,+\infty}f(x)\ \exist\Rightarrow f(x)在(a,b)内有界$$
-$$f'(x)在有限区间(a,b)内有界\Rightarrow f(x)在(a,b)内有界$$
+$$f(x)在[a,b]上连续或单调\Rightarrow f(x)在[a,b]上有界$$
+$$f(x)在(a,b)，(-\infty,+\infty)内连续或单调,且\lim\limits_{x\to a+,-\infty}f(x)\ \exist, \lim\limits_{x\to b^-,+\infty}f(x)\ \exist\Rightarrow f(x)在(a,b)内有界$$
+$$f'(x)在有限区间(a,b)内有界([a,b]上判断(a,b)即可，端点另行判断)\Rightarrow f(x)在(a,b)内有界$$
 
 ## 函数的平移放缩
 
@@ -356,7 +355,7 @@ $$注：常函数为周期函数，但无最小正周期 T$$
 
 ## 复合函数问题重要思路
 
-[“整体代换”]
+**整体代换**
 $$1.\ f[\varphi(x)]=e^{\varphi^2(x)}=1-x$$
 $$2.\ f[f(x)]=
 \left\{
@@ -408,7 +407,9 @@ $$凡出现\circ(\Delta),即默认\Delta\to 0,强调动态性$$
 ## 无界与无穷大，发散与无界的关系
 
 无界包含：无穷大，无界振荡，无界分段函数等等
+
 发散包含：无界，有界振荡，有界分段函数等等
+
 （收敛是很狭隘的）
 
 ## 无穷小与无穷大的关系
@@ -1913,7 +1914,7 @@ $$
 
 # 零点问题
 
-罗尔定理推论
+## 罗尔定理推论
 
 $$f^{(n)}(x)=0至多有k(k\geqslant0)个根，则f(x)=0至多有k+n个根\\
 \ \\
@@ -2551,7 +2552,7 @@ $$微分方程：f(t)=e^{4\pi t^2}+2\pi \int_0^{2t}f(\frac{1}{2}r)dr（变限积
 
 # 变限积分函数
 
-变限积分函数的连续性、可导性
+## 变限积分函数的连续性、可导性
 $$\Phi(x)=\int_0^xf(x)dx$$
 
 $$1. f(x)在[a,b]可积，\Phi(x)在[a,b]上连续\\
@@ -3561,7 +3562,7 @@ $$主要使用比较审敛法，
 
 # 幂级数
 
-阿贝尔定理
+## 阿贝尔定理
 
 $$\sum_{n=0}^{\infty}a_nx^n在x=x_1处收敛，对于满足|x|<|x_1|的一切x,幂级数\ \textbf{绝对收敛}$$
 $$\sum_{n=0}^{\infty}a_nx^n在x=x_2处发散，对于满足|x|>|x_1|的一切x,幂级数\ \textbf{发散}$$
@@ -3790,7 +3791,7 @@ $$注：展开成x的幂级数，即在x=0处展开\\
 
 # 空间解析几何
 
-数量积、向量积、混合积
+## 数量积、向量积、混合积
 
 $$数量积：\textbf{a}\cdot\textbf{b}=|\textbf{a}|\cdot|\textbf{b}|\cos\theta$$
 $$向量积：\textbf{a}\times \textbf{b}=

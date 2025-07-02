@@ -798,7 +798,7 @@ $$级数求和，灵活寻找与幂级数的关系，和函数计算$$
 
 # 大数定律与中心极限定理
 
-依概率收敛
+## 依概率收敛
 
 $$\quad\ X_n\xrightarrow{P}X \\\Leftrightarrow\lim\limits_{n\to \infty}P\{|X_n-X|\geqslant\varepsilon\}=0或\lim\limits_{n\to \infty}P\{|X_n-X|\leqslant\varepsilon\}=1$$
 
@@ -838,7 +838,7 @@ n\gg1时，\overline{X}\sim N(EX,DX)（近似）$$
 
 # 数理统计的基本概念
 
-简单随机样本
+## 简单随机样本
 
 $$独立、同分布$$
 
