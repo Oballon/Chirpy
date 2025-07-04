@@ -148,13 +148,6 @@ $$a^3+b^3=(a+b)(a^2-ab+b^2)$$
 
 ## 常用不等式（等号成立条件）
 
-$$(|a\pm b|, |a|+|b|, ||a|-|b||)$$
-$$(\frac{2}{\frac{1}{a}+\frac{1}{b}},\sqrt{\frac{a^2+b^2}{2}},\sqrt{ab}, \frac{a+b}{2}) $$
-$$(\sin x, x, \tan x)
-(\arctan x, x, \arcsin x,)
-(e^x-1,x, \ln(x+1))$$
-$$\left(\frac{1}{1+x}, \ln(1+\frac{1}{x}), \frac{1}{x}\ \ (x>0)\right)\left(\frac{x}{1+x},\ln(1+x),x\ (x>0)\right)$$
-
 **不等式灵活使用，形式多样本质不变，勿固化**
 $$||a|-|b|| \leqslant |a\pm b| \leqslant |a|+|b|  $$
 $$\frac{2}{\frac{1}{a}+\frac{1}{b}}\leqslant\sqrt{ab}\leqslant \frac{a+b}{2}\leqslant \sqrt{\frac{a^2+b^2}{2}} {(a,b>0,a=b时等号成立;\quad 高维同样成立)}\\
@@ -166,6 +159,8 @@ $$\begin{array}{l}
 \end{array}$$
 $$\frac{1}{1+x}<\ln(1+\frac{1}{x})< \frac{1}{x}   \ \ (x>0)\qquad\frac{x}{1+x}<\ln(1+x)<x\ \ (x>0)\\
 {\color{blue}注：\Delta>0前提下，灵活替换x}$$
+$$柯西不等式：\\
+(ac+bd)^2\leqslant [a^2+b^2][c^2+d^2](等号成立条件\frac{a}{c}=\frac{b}{d}；\quad 高维同样成立)$$
 
 ## 双阶乘
 $$(2n)!!\ \ \ \ \  (2n-1)!!$$
@@ -586,13 +581,19 @@ $$注：
 
 ## 洛必达法则三项使用条件
 
+**定理前身**
+$$\frac{f(b)-f(a)}{F(b)-F(a)}=\frac{f'(\xi)}{F'(\xi)}$$
+
 **严格遵循使用条件**
 $$三项使用条件：\\
 1. \ x\to a,\infty时，f(x),g(x)\to 0,\infty\\
 \ \\
-2. \  f(x),F(x)在x\in \mathring{U}(a,\delta)内，x\to \infty时可导\\
+2. \  f(x),F(x)在x\in \mathring{U}(a,\delta)内，x\to \infty时可导，且F'(x)\neq 0\\
 \ \\
 3. \lim\limits_{x\to a,\infty}\frac{f'(x)}{F'(x)}=A,\infty$$
+
+$$注： \infty,+\infty,-\infty 均可\\
+a^+,a^-均可$$
 
 ## 洛必达法则易错用法
 
@@ -663,28 +664,32 @@ $$适用具体型极限\\
 
 **首先考虑洛必达**
 $$\begin{array}{rl}\quad\ &\lim\limits_{t\to 0^+}\frac{\int_0^t dx\int_t^x e^{-(x-y)^2}dy}{1-e^{-t^2}}（二重积分被积函数含积分限变量，交换积分次序）\\
-=&\lim\limits_{t\to 0^+}\frac{\int_0^t dy\int_0^y e^{-(x-y)^2}dx}{-t^2}\\
+=&\lim\limits_{t\to 0^+}\frac{\int_0^t dy\int_0^y e^{-(x-y)^2}dx}{-t^2}(\int_t^x 上下限由大至小)\\
 \xrightarrow{洛}&\lim\limits_{t\to 0^+}\frac{\int_0^t e^{-(x-t)^2}dx}{-2t}（一元积分被积函数含积分限变量，变量代换）
 \end{array}$$
 
 ## 微分方程求等价无穷小
 $$y''+2y'+y=e^{3x},y(0)=y'(0)=0，y(x)一阶连续可导\\求x\to0时,y(x)的等价无穷小$$
 
-$$不建议解微分方程，分析法，洛必达讨论\\
-y''(0)=1\qquad\lim\limits_{x\to 0}\frac{y(x)}{x^b}\xrightarrow{洛}\lim\limits_{x\to 0}\frac{y'(x)}{bx^{b-1}}\xrightarrow{洛}\lim\limits_{x\to 0}\frac{y''(x)}{b(b-1)x^{b-2}}
+$$不建议解微分方程，分析法，洛必达或泰勒公式讨论\\
+y''(0)=1\qquad\lim\limits_{x\to 0}\frac{y(x)}{ax^b}\xrightarrow{洛}\lim\limits_{x\to 0}\frac{y'(x)}{abx^{b-1}}\xrightarrow{洛}\lim\limits_{x\to 0}\frac{y''(x)}{ab(b-1)x^{b-2}}
 =1$$
-$$注：微分方程形式低阶连续可导的高阶传递性$$
+$$x\rightarrow 0时，y(x)=y(0)+y'(0)x+\frac{y''(0)}{2!}x^2+\circ(x^2)$$
+$$注：微分方程形式连续可导的传递性$$
+$$y'''+2y''+y'=3e^{3x},高阶同样连续可导$$
 
 # """数列极限"""
 
 ## 考情分析
 
 难点：“数列递推关系”题型、“方程的根”题型
+
 关键：单调有界准则、夹逼定理
 
 ## 海涅定理（归结原则）
 
 **计算时正向使用，反向难以操作**
+
 **具体数列“n”直接当"x"使用（抓大放小、等价无穷小、泰勒展开等等均可用）**
 $$f(x)在\mathring{U}(x_0)内有定义\\
 \lim\limits_{x\to x_0}f(x)=A\Leftrightarrow对任意以x_0为极限的数列\{x_n\}（x_n\neq x_0）,都有\lim\limits_{n\to \infty}f(x_n)=A\\
@@ -696,7 +701,7 @@ $$\lim\limits_{x\to +\infty}f(x)=A \nLeftarrow \lim\limits_{n\to \infty}f(n)=A $
 ## 无穷大的比较
 
 $$n\to \infty时\\
-\ln\ n \ll n^\alpha(\alpha>0) \ll a^n(a>1)\ll n!\ll n^n$$
+\log_a\ n \ll n^\alpha(\alpha>0) \ll a^n(a>1)\ll n!\ll n^n$$
 $$注：\lim\limits_{n\to \infty}\frac{2^n\cdot n!}{n^n}=0;\quad
 
 \lim\limits_{n\to \infty}\frac{2^n\cdot n!\cdot n^9}{n^n}=0;\quad
@@ -705,17 +710,14 @@ $$注：\lim\limits_{n\to \infty}\frac{2^n\cdot n!}{n^n}=0;\quad
 
 ## 数列极限定义注意
 
-1. 数列极限的间断性
-$$\ \ \ \ (n\in Z^+)$$
-2. 数列极限的单边性
-$$\ \ \ \ (n\in Z^+)$$
+1. 数列极限的间断性$$\ \ \ \ (n\in Z^+)$$
+2. 数列极限的单边性$$\ \ \ \ (n\in Z^+)$$
 
 ## 单调有界准则“两条件”判断顺序
 
 $$先判上下界，再判单调性（单调性判断多数情况依赖上下界，上下界依赖单调性较少）$$
 
 ## 数列递推关系处理（不等式）
-上下界、单调性
 
 **上下界：**
 $$x_{n+1}=\sqrt{x_n(4-x_n)}\Rightarrow \\x_{n+1}=\sqrt{x_n(4-x_n)}\leqslant\frac{x_n+4-x_n}{2}=2$$
@@ -747,10 +749,11 @@ $$x_1=\sqrt{2}, x_{n+1}=\sqrt{2+x_n},\cdots$$
 $$单调有界准则证明\\
 1. 假设极限存在为A，解A\\
 2. 归纳法证上下界A\\
-3. 归纳法证单调性
-
+ 设x_k<2,x_{k+1}=\sqrt{2+x_k}<2\\
+3. 归纳法证单调性\\
+设\frac{x_{k+1}}{x_k}>1,\frac{x_{k+2}}{x_{k+1}}=\frac{\sqrt{2+x_{k+1}}}{\sqrt{2+x_k}}>1
 $$
-重要方法：[Card#ID/1XSak#连续放缩法]
+重要方法：[Card#ID/1XSak#压缩映射原理]
 
 ## 利用函数单调性判断数列单调性
 
@@ -761,17 +764,42 @@ f'(x)>0,且a_2>a_1\Rightarrow \{x_n\}\nearrow\\
 f'(x)>0,且a_2<a_1\Rightarrow \{x_n\}\searrow\\
 结论证明：\\
 x_{n+1}-x_n=f(x_{n})-f(x_{n-1})=f'(\xi_1)(x_n-x_{n-1})=\cdots=f'(\xi_1)f'(\xi_2)\cdots f'(\xi_{n-1})(x_2-x_1)$$
-$$注：由x_{n+1}=f(x_n)型单增递推式变化规律可知（见下图），x_n极限只可能等于x=f(x)交点$$
+
+## 函数单调性判断数列单调性图像分析
+
+$$由x_{n+1}=f(x_n)型单增递推式变化规律可知（见下图），x_n极限只可能等于x=f(x)交点$$
 
 $$f'(x)<0,\{x_n\}不单调，振荡$$
 $$即使f(x)不单调，\{x_n\}也可能单调（数列值域只落在f(x)单调区间内）$$
 $$\{x_n\}增减性与f(x)的关系$$
 ![](pic-advance-math\Markji_1751354211654.png)
 
+## 递归处理技巧
+
+$${\color{blue}\star\star重要情形：}\\
+x_{n+1}=f(x_n),\ |f'(x)|<1\\
+令A=f(A)\\
+n\to \infty时，|x_n-A|=|f(x_{n-1})-f(A)|=|f'(\xi_1)||x_{n-1}-A|=\cdots=|f'(\xi_1)\cdots f'(\xi_{n-1})||x_1-A|\rightarrow 0\\
+\ \\
+n\to \infty时，|x_{n+1}-x_n|=|f'(\xi_1)||x_n-x_{n-1}|=\cdots=|f'(\xi_1)\cdots f'(\xi_{n-1})||x_2-x_1|\rightarrow 0$$
+
+## 连续放缩法
+
+**根据极限构造不等式**
+$$\lim\limits_{n\to \infty}x_n=c\rightarrow|x_n-c|（若x_n-c>0,可去绝对值）\\
+|x_n-c|\leqslant \frac{3}{4}|x_n-c|\leqslant\cdots \left|\frac{3}{4}\right|^n|x_1-c|\\
+\frac{y_{n+1}}{x_{n+1}}=\frac{y_n^2}{\sin x_n}<\frac{\pi}{4}\frac{y_n}{x_n}<\cdots \left(\frac{\pi}{4}\right)^2\frac{y_1}{x_1}$$
+
 ## 数列计算常用结论
+
+$$\lim\limits_{n\to \infty}\sqrt[n]{n}=1,\lim\limits_{n\to \infty}\sqrt[n]{a}=1,\lim\limits_{n\to \infty}\sqrt[n]{\frac{1}{n}}=1\\
+灵活拆分，根号下为有限项多项式、有限项多项式的倒数、(n,\frac{1}{n})的有限项多项式也成立
+$$
 
 $$\lim\limits_{n\to \infty}\sqrt[n]{a_1^n+a_2^n+\cdots+a_k^n}=\max\{a_1,a_2,\cdots,a_k\}=a^*\\
 a^*=\sqrt[n]{{a^*}^n}\leqslant\sqrt[n]{a_1^n+a_2^n+\cdots+a_k^n}\leqslant\sqrt[n]{n{a^*}^n}=a^*$$
+
+$$注：数列极限\lim\limits_{n\to \infty}(\Delta)^{\frac{1}{n}}问题：首先考虑放缩法$$
 
 ## 数列敛散性结论
 
@@ -779,12 +807,12 @@ $$\lim\limits_{n\to \infty}x_n=a\Leftrightarrow \lim\limits_{n\to \infty}x_{2n}=
 $$\lim\limits_{n\to \infty}x_n\ \exists\ \substack{\Rightarrow\\ \not\Leftarrow}\lim\limits_{n\to\infty}(x_{n+1}-x_n)=0（反例：x_n=\sum_{n=1}^{\infty}\frac{1}{n}）$$
 $$
 \lim\limits_{n\to \infty}\{x_n-y_n\}=0\not\Rightarrow
-\lim\limits_{n\to \infty}\frac{\{x_n\}}{\{y_n\}}=1\quad（反例：x_n=\frac{1}{n^2}+\frac{1}{n},y_n=\frac{1}{n^2}）\\
+\lim\limits_{n\to \infty}\frac{x_n}{y_n}=1\quad（反例：x_n=\frac{1}{n^2}+\frac{1}{n},y_n=\frac{1}{n^2}）\\
 \qquad\qquad\qquad\qquad  \not\Leftarrow \qquad\qquad\qquad\qquad（反例：x_n=n(n+1),y_n=n^2）\\
 
 \lim\limits_{n\to\infty}(x_{n+1}-x_n)=0\not\Rightarrow\lim\limits_{n\to\infty}\frac{x_{n+1}}{x_n}=1（\lim\limits_{n\to \infty}x_n\neq0时成立，反例：x_n=\frac{1}{n!}）\\
 
-\qquad\qquad\qquad\qquad\quad  \not\Leftarrow \qquad\qquad\qquad\quad（反例：x_n=n）$$
+\qquad\qquad\quad  \not\Leftarrow \qquad\qquad\qquad\qquad\quad（反例：x_n=n）$$
 $$\lim\limits_{n\to \infty}x_n=a \ \  \substack{\Rightarrow \\ \nLeftarrow}\ \ \lim\limits_{n\to \infty}|x_n|=\pm a(a\neq0)\\
 $$
 $$\lim\limits_{n\to \infty}x_n= 0\Leftrightarrow\lim\limits_{n\to \infty}|x_n|=0$$
@@ -807,6 +835,7 @@ $$递推型：\\
 
 **2. 夹逼准则（放缩）：**
 无法求和极限，用放缩法夹逼求和
+
 **3. 单调有界准则：**
 判单调性、放缩看上界、下界
 
@@ -815,29 +844,17 @@ $$递推型：\\
 $$\lim\limits_{n\to \infty}\sum_{i=1}^{n}f[a+\frac{(b-a)i}{n}]\frac{b-a}{n}=\int_a^b f(x)dx$$
 $$\lim\limits_{n\to \infty}\frac{1}{n}(\frac{\sqrt{n^2-1^2}}{n}+\frac{\sqrt{n^2-2^2}}{n}+\cdots+\frac{\sqrt{n^2-n^2}}{n})\Rightarrow f(x)=\sqrt{1-x^2}$$
 $$\lim\limits_{n\to \infty}\sqrt[n]{(1+\frac{1}{n})^2(1+\frac{2}{n})^2\cdots(1+\frac{n}{n})^2}\xRightarrow{指数化}f(x)=\ln(1+x)^2$$
-**5. 构造导数定义**
-$$f(0)=0,f'(0)=1,求\lim\limits_{n\to \infty}\big[f(\frac{1}{n^2})+f(\frac{2}{n^2})+\cdots+f(\frac{n}{n^2})\big]\\
+
+$$ 构造导数定义\\
+ f(0)=0,f'(0)=1,求\lim\limits_{n\to \infty}\big[f(\frac{1}{n^2})+f(\frac{2}{n^2})+\cdots+f(\frac{n}{n^2})\big]\\
 \lim\limits_{n\to \infty}[\frac{f(\frac{1}{n^2})-f(0)}{(\frac{1}{n^2})}\frac{1}{n^2}+\frac{f(\frac{2}{n^2})-f(0)}{(\frac{2}{n^2})}\frac{2}{n^2}+\cdots+\frac{f(\frac{n}{n^2})-f(0)}{(\frac{n}{n^2})}\frac{n}{n^2}]\\
 \lim\limits_{n\to \infty}[\frac{1}{n^2}+\frac{2}{n^2}+\cdots+\frac{n}{n^2}]$$
-
-## 连续放缩法
-
-**根据极限构造不等式**
-$$\lim\limits_{n\to \infty}x_n=c\rightarrow|x_n-c|（若x_n-c>0,可去绝对值）\\
-|x_n-c|\leqslant \frac{3}{4}|x_n-c|\leqslant\cdots \left|\frac{3}{4}\right|^n|x_1-c|\\
-\frac{y_{n+1}}{x_{n+1}}=\frac{y_n^2}{\sin x_n}<\frac{\pi}{4}\frac{y_n}{x_n}<\cdots \left(\frac{\pi}{4}\right)^2\frac{y_1}{x_1}$$
-$${\color{blue}\star\star重要情形：}\\
-x_{n+1}=f(x_n),\ |f'(x)|<1\\
-令A=f(A)\\
-n\to \infty时，|x_n-A|=|f(x_{n-1})-f(A)|<|f'(\xi_1)||x_{n-1}-A|<\cdots<|f'(\xi_1)\cdots f'(\xi_{n-1})||x_1-A|=0\\
-\ \\
-n\to \infty时，|x_{n+1}-x_n|<|f'(\xi_1)||x_n-x_{n-1}|<\cdots<|f'(\xi_1)\cdots f'(\xi_{n-1})||x_2-x_1|=0$$
 
 ## 极限凑“q<1”技巧
 
 $$0<a_1<a_2,\lim\limits_{n\to \infty}(a_1^{-n}+a_2^{-n})^{\frac{1}{n}}$$
 $$I=\lim\limits_{n\to \infty}a_1^{-1}[1+(\frac{a_1}{a_2})^{n}]^{\frac{1}{n}}=a_1^{-1}$$
-$$x_n=(1+a)^n+(1-a)^n,证:\lim\limits_{n\to \infty}\frac{x_{x+1}}{x_n}=
+$$x_n=(1+a)^n+(1-a)^n,证:\lim\limits_{n\to \infty}\frac{x_{n+1}}{x_n}=
 \left\{
 \begin{array}{ll}
 1+|a|, &a\neq0\\
@@ -847,13 +864,6 @@ $$x_n=(1+a)^n+(1-a)^n,证:\lim\limits_{n\to \infty}\frac{x_{x+1}}{x_n}=
 \right.$$
 $$a>0时,\lim\limits_{n\to \infty}\frac{x_{n+1}}{x_n}=\lim\limits_{n\to \infty}\frac{1+a+(\frac{1-a}{1+a})^n(1-a)}{1+(\frac{1-a}{1+a})^n}=1+a\\
 a<0时，......$$
-
-## 数列极限$\lim\limits_{n\to \infty}(\Delta)^{\frac{1}{n}}$问题
-
-**首先考虑放缩法**
-$$\lim\limits_{n\to \infty}\sqrt[n]{n}=1,\lim\limits_{n\to \infty}\sqrt[n]{a}=1,\lim\limits_{n\to \infty}\sqrt[n]{\frac{1}{n}}=1\\
-灵活拆分，根号下为有限项多项式、有限项多项式的倒数、(n,\frac{1}{n})的有限项多项式也成立
-$$
 
 ## 压轴题型一
 
@@ -1392,9 +1402,7 @@ $$f(x)在[a,b]上连续，\\
 F(x)=\int_a^xf(t)dt\\
 F(b)-F(a)=\int_a^bf(x)dx=f(\xi)(b-a)\quad \xi\in(a,b)$$
 
-##
-
-第一积分中值定理及推广
+## 第一积分中值定理及推广
 
 **不可直接使用**
 $$\left\{
@@ -2307,10 +2315,10 @@ $$选择题，直接选项求导（稳定）$$
 ## 不定积分“变量对应”题型
 复合函数、积分变量对应
 
-**复合函数：]
+**复合函数：**
 $$f(\ln x)=\frac{\ln(1+x)}{x},求\int f(x)dx（令x=\ln t,参考前式变量代换即可）$$
 $$其余求解类型，解f(x)即可$$
-**积分变量对应：]
+**积分变量对应：**
 $$\quad\int f(x)dx=\frac{\sin x}{x}+C\\
 \Rightarrow \int f(ax)dx=\int \frac{f(ax)}{a}d(ax)=\frac{\sin(ax)}{a^2x}+C$$
 
@@ -2323,7 +2331,9 @@ $$\quad\int \frac{xe^x}{(1+x)^2}dx=\int \frac{(1+x-1)e^x}{(1+x)^2}dx\\=
 =\frac{e^x}{1+x}$$
 $$注：此题\frac{1}{(1+x)^2}分部积分更简便$$
 
-## $\int \frac{1}{1+x^4}dx$
+## 不定积分特例
+
+$$\int \frac{1}{1+x^4}dx$$
 
 $$\int \frac{1}{1+x^4}dx = \frac{1}{2}\int \frac{(1+x^2)+(1-x^2)}{1+x^4}$$
 $$\begin{array}{llll}
@@ -2738,8 +2748,9 @@ $$\lim\limits_{x\to 0},\lim\limits_{x\to +\infty}
 \end{array}
 \right.\quad \cdots$$
 
-## $\Gamma$函数\\
-\Gamma(\alpha)=\int_0^{+\infty}x^{\alpha-1}e^{-x}dx(\alpha>0)$$
+## Gamma函数
+
+$$\Gamma(\alpha)=\int_0^{+\infty}x^{\alpha-1}e^{-x}dx(\alpha>0)$$
 
 $$\Gamma(\alpha+1)=\alpha\Gamma(\alpha)\\
 \Gamma(n+1)=n!\quad
@@ -2748,7 +2759,9 @@ $$\Gamma(\alpha+1)=\alpha\Gamma(\alpha)\\
 $$例：\\
 \int_0^{+\infty}x^3e^{-x}dx=\int_0^{+\infty}x^{4-1}e^{-x}dx=\Gamma(4)=3!$$
 
-## $I=\int_0^{+\infty}e^{-x^2}dx$
+## 特殊反常积分
+
+$$I=\int_0^{+\infty}e^{-x^2}dx$$
 
 $$I=\int_0^{+\infty}e^{-x^2}dx\\
 I^2=\int_0^{+\infty}e^{-x^2}dx\int_0^{+\infty}e^{-y^2}dy\\
