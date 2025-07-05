@@ -160,7 +160,7 @@ $$\begin{array}{l}
 $$\frac{1}{1+x}<\ln(1+\frac{1}{x})< \frac{1}{x}   \ \ (x>0)\qquad\frac{x}{1+x}<\ln(1+x)<x\ \ (x>0)\\
 {\color{blue}注：\Delta>0前提下，灵活替换x}$$
 $$柯西不等式：\\
-(ac+bd)^2\leqslant [a^2+b^2][c^2+d^2](等号成立条件\frac{a}{c}=\frac{b}{d}；\quad 高维同样成立)$$
+(ac+bd)^2\leqslant (a^2+b^2)(c^2+d^2) (等号成立条件\frac{a}{c}=\frac{b}{d}；\quad 高维同样成立)$$
 
 ## 双阶乘
 $$(2n)!!\ \ \ \ \  (2n-1)!!$$
