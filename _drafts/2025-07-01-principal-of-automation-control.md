@@ -54,17 +54,17 @@ $$\left\{
 
 \end{array}
 \right.$$
-$${\color{grey}
+$$
 
 \left\{
 \begin{array}{l}
-\mathscr{L}[{\underbrace{\int \cdots \int}_n} f(t)(dt)^n]=\frac{1}{s^n}F(s)（零初始条件）\qquad \mathscr{L}[\int f(t)dt]=\frac{1}{s}F(s)+\frac{1}{s}f^{(-1)}(0)\\
+\mathscr{L}[{\underbrace{\int \cdots \int}_n} f(t)(dt)^n]=\frac{1}{s^n}F(s)（零初始条件）\qquad {\color{grey}\mathscr{L}[\int f(t)dt]=\frac{1}{s}F(s)+\frac{1}{s}f^{(-1)}(0)}\\
 
-\mathscr{L}[{\underbrace{\int \cdots \int}_n} f(t)(dt)^n]=\frac{1}{s^n}F(s)+\frac{1}{s^n}f^{(-1)}(0)+\frac{1}{s^{n-1}}f^{(-2)}(0)+\cdots +\frac{1}{s}f^{(-n)}(0)
+{\color{grey}\mathscr{L}[{\underbrace{\int \cdots \int}_n} f(t)(dt)^n]=\frac{1}{s^n}F(s)+\frac{1}{s^n}f^{(-1)}(0)+\frac{1}{s^{n-1}}f^{(-2)}(0)+\cdots +\frac{1}{s}f^{(-n)}(0)}
 \end{array}
-\right.\qquad （不考）
+\right.\qquad 
 
-}$$
+$$
 $$\mathscr{L}[f(t \pm \tau_0)]=e^{\pm \tau_0s}F(s)\qquad注： \mathscr{L}[f'(t\pm \tau_0)]\xlongequal[g(t)=f(t\pm \tau_0)]{g(t)=f'(t)}e^{\pm \tau_0s}sF(s)\\
 
 \mathscr{L}[e^{\mp At}f(t)]=F(s\pm A)\qquad 注：\mathscr{L}[e^{\mp At}f'(t)]\xlongequal{g(t)=f'(t)}G(s\pm A)=(s\pm A)F(s\pm A)$$
@@ -77,6 +77,7 @@ $$\lim\limits_{t\to0}f(t)=\lim\limits_{s\to \infty}s\cdot F(s)\\
 ## 考情分析
 
 简单电路网络，简单力学系统，机电系统（会预给公式）的建模
+
 计算传递函数：微分方程整理，框图化简
 
 ## 电气网络
@@ -114,7 +115,7 @@ $$技巧：\\
 
 ## 机电系统
 
-**初步认定，电机系统不考查原理（题目会提供）**
+**电机系统不考查原理（题目会提供）**
 
 ## 微分方程列写技巧及注意
 
