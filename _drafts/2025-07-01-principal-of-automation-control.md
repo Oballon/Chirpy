@@ -423,7 +423,7 @@ $$二次因式：\\
 \mathscr{L^{-1}}\left[\frac{\omega}{(s+a)^2+\omega^2}\right]=e^{-at}\sin\omega t\\
 \ \\
 注：重复根不考查$$
-[Card#ID/1Qe8M#拉氏变换基本定理]
+[拉氏变换基本定理](#拉氏变换基本定理)
 
 ## 非零初始条件下的系统响应
 
@@ -1020,7 +1020,7 @@ K\angle 0\degree,& v=0\\
 1.\ s平面中，s=j\omega(\omega=0\to +\infty)\\
 据向量关系定性分析|G(j\omega)|与\angle G(j\omega)变化趋势（仅一、二象限），所得绘制于[G]平面中\\
 2.\ 若需要绘制渐近线，整理G(j\omega)为实部、虚部求极限$$
-[Card#ID/2LV3U#][Card#ID/2LV3U#传函子环节存在三、四象限情形]
+[传函子环节存在三、四象限情形](#传函子环节存在三、四象限情形)
 $$注：重点在0^+,+\infty时的图像，中间图像大致即可\\
 
 K仅对\text{Nyquist}曲线进行放大缩小，不改变曲线形状$$
@@ -1032,7 +1032,7 @@ G(j\omega)整理为实部、虚部\\
 G(j\omega)=\frac{-10\omega^2}{\omega^2(1+\omega^2)}+j\frac{5\omega}{\omega^2(1+\omega^2)}\\
 G(j0^+)=-10+j\infty，增补\infty\cdot \angle -90\degree\cdot v虚线，0^+\to \infty部分据向量关系分析趋势即可\\
 \omega=0\to -\infty部分由\omega=0\to +\infty部分关于实轴对称即可$$
-[Card#ID/2LV3U#][Card#ID/2LV3U#传函子环节存在三、四象限情形]
+[传函子环节存在三、四象限情形](#传函子环节存在三、四象限情形)
 ![](pic-principal-of-automation-control\Markji_1751374641018.png)
 $$注：非最小相角系统也可能始于正实轴\\
 \left\{\begin{array}{l}
@@ -1232,7 +1232,7 @@ $$\sigma\%,t_s
 \textcircled{2}\star高阶系统转化为\omega_c,\gamma
 \end{array}\right.
 $$
-[Card#ID/2elj8#高阶系统超调量与调节时间的经验公式]
+[高阶系统超调量与调节时间的经验公式](#高阶系统超调量与调节时间的经验公式)
 
 ## 三频段理论
 
@@ -1753,7 +1753,7 @@ $$定义：非线性环节在正弦输入f(t)=A\sin\omega t下的基波y(t)=Y\si
 N(A)为一复变函数\\
 |N(A)|=\frac{Y}{A},\,\quad \angle N(A)=\phi
 \end{array}\right.$$
-[Card#ID/2gNcZ#描述函数的计算]
+[描述函数的计算](#高阶系统超调量与调节时间的经验公式)
 $$性质：
 \left\{\begin{array}{}N(A)=N_1(A)+N_2(A)\\
 N(A)\neq N_1(A)\times N_2(A)

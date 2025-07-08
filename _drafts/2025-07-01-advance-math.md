@@ -566,7 +566,7 @@ $$仅少数须拆分（泰勒首阶次无相消）：\lim\limits_{x\to0}\frac{\s
 $$1^\infty: \lim u^v=e^{\lim(u-1)v}；
 {\color{blue}对复合函数极限使用了非零因子常数化（误差可能放大）,整式可如此处理，分式谨慎}\\
 \lim\limits_{x\to +\infty}\frac{(1+\frac{1}{x})^{x^2}}{e^x}=e^{-\frac{1}{2}},\quad \lim\limits_{x\to +\infty}\frac{(1+\frac{1}{x})^{x^2}}{(1+\frac{1}{2x})^{2x^2}}=e^{-\frac{3}{8}} \quad （指数化）$$
-[Card#ID/1XS81#极限指数化与对数化]
+[极限指数化与对数化](#极限指数化与对数化)
 
 ## 泰勒展开原则及注意
 $$A-B型，\frac{A}{B}型$$
@@ -637,7 +637,7 @@ $$注：a^x-b^x\xrightarrow{同型化} e^{x\ln a}-e^{x\ln b}$$
 $$\lim\limits_{x\to \cdot} \frac{f(x)}{x^k}=A,f(x)=Ax^k+\alpha x^k\ (\lim\limits_{x\to \cdot}\alpha=0)\\
 (或f(x)=Ax^k+\circ(x^k))\qquad
  （可利用此变换f(x)）$$
-[Card#ID/1VS7M#][Card#ID/1Xwj8#无穷小求导函数]
+[无穷小求导函数](#无穷小求导函数)
 
 ## 极限定义函数
 
@@ -753,7 +753,7 @@ $$单调有界准则证明\\
 3. 归纳法证单调性\\
 设\frac{x_{k+1}}{x_k}>1,\frac{x_{k+2}}{x_{k+1}}=\frac{\sqrt{2+x_{k+1}}}{\sqrt{2+x_k}}>1
 $$
-重要方法：[Card#ID/1XSak#压缩映射原理]
+重要方法：[压缩映射原理](#压缩映射原理)
 
 ## 利用函数单调性判断数列单调性
 
@@ -964,7 +964,8 @@ $$
 $$\Delta y=f'(x_0)\Delta x+\circ(\Delta x)\\
 线性主部：f'(x_0)\Delta x$$
 ![](pic-advance-math\Markji_1751354284917.png)
-$$注：可微代表光滑，一阶可微等价于一阶可导（高阶不然）$$
+$$注：光滑指无穷阶可导的性质，光滑一定可微\\
+一阶可微等价于一阶可导（高维不然）$$
 
 ## 导数与极限关系
 
@@ -977,6 +978,8 @@ $$例:
 
 $$有切线不一定有导数\\
 y=x^{\frac{1}{3}}在x=0处有切线，但导数无穷大$$
+
+$$高阶可导，低阶一定可导$$
 
 ## 定义求导的三要素
 
@@ -993,7 +996,7 @@ $$双动点导数：\\
 ## 导数存在充要判据
 
 $$直接判断：左导＝右导\\
-前提：函数连续、导数存在（若不满足，直接不可导）$$
+前提：函数连续，左、右导数存在（若不满足，直接不可导）$$
 
 ## 导函数的奇偶性、周期性
 
@@ -1038,7 +1041,7 @@ f(x_0)= 0\ 且f'(x_0)=0时，y=|f(x)|在x_0处可导(y'|_{x_0}=0)\\
 \end{array}
 \right.$$
 
-## 高阶无穷小求导数问题
+## 含高阶无穷小求导数问题
 $$g(x)=2x+3x^2+x^3+\underbrace{\circ(x^3)}_{f(x)},求g^{(k)}(0)$$
 
 **泰勒公式法直接对应即可**
@@ -1046,13 +1049,14 @@ $$结论：f(x)\ 在x=0处n阶可导,f(x)=\circ{(x^n)}（即\lim\limits_{x\to0}\
 \left\{\begin{array}{l}
 f^{(k)}(0)=0,k=1,2,\cdots,n\\
 
-g^{(k)}(0)=a_k\cdot k!,k=1,2,\cdots\\
+g^{(k)}(0)=a_k\cdot k!,k=1,2,\cdots,n\\
 
 \end{array}\right.$$
-$$证f(x)在x=0处的低阶导数，构造低阶即可$$
+$$注：f(x)\sim ax^k \Leftrightarrow f(x)=ax^k+\circ(x^k)$$
+$${\color{grey}证f(x)在x=0处的低阶导数，构造低阶即可}$$
 $$
-x=0处f(x)n阶可导，则\exists \ x=0的某邻域，使f(x)\ n-1阶可导$$
-$$\begin{array}{rl}
+{\color{grey}x=0处f(x)n阶可导，则\exists \ x=0的某邻域，使f(x)\ n-1阶可导}$$
+$${\color{grey}\begin{array}{rl}
 &\lim\limits_{x\to 0}\frac{f(x)}{x^{n-1}}=0\\
 \underrightarrow{n-1次洛必达}&\lim\limits_{x\to0}\frac{f^{(n-1)}(x)}{(n-1)!}\ \exists\\
 \therefore & \lim\limits_{x\to0}\frac{f^{(n-1)}(x)}{(n-1)!}=\lim\limits_{x\to 0}\frac{f(x)}{x^{n-1}}=0,即\lim\limits_{x\to 0}f^{(n-1)}(x)=0\\
@@ -1062,9 +1066,10 @@ $$\begin{array}{rl}
 &\lim\limits_{x\to 0}\frac{f(x)}{x^n}=0\\
 \underrightarrow{n-1次洛必达} & \lim\limits_{x\to 0}\frac{f^{(n-1)}(x)}{(n-1)!x}=\frac{1}{(n-1)!}\lim\limits_{x\to0}\frac{f^{(n-1)}(x)-f^{(n-1)}(0)}{x-0}=\frac{1}{(n-1)!}f^{(n)}(0)\ \exists\\
 \therefore & \frac{1}{(n-1)!}f^{(n)}(0)=\lim\limits_{x\to 0}\frac{f(x)}{x^n}=0
-\end{array}$$
+\end{array}}$$
 
-## 同阶无穷小求导数问题
+
+<!-- ## 同阶无穷小求导数问题
 $$g(x)\sim ax^2,且二阶可导$$
 
 **泰勒公式法直接对应即可**
@@ -1082,16 +1087,19 @@ $$\begin{array}{rl}
 &\lim\limits_{x\to 0}\frac{f(x)}{ax^n}=1\\
 \underrightarrow{n-1次洛必达} & \lim\limits_{x\to 0}\frac{f^{(n-1)}(x)}{(n-1)!ax}=\frac{1}{a(n-1)!}\lim\limits_{x\to0}\frac{f^{(n-1)}(x)-f^{(n-1)}(0)}{x-0}=\frac{1}{a(n-1)!}f^{(n)}(0)\ \exists\\
 \therefore & \frac{1}{a(n-1)!}f^{(n)}(0)=\lim\limits_{x\to 0}\frac{f(x)}{ax^n}=1
-\end{array}$$
+\end{array}$$ -->
 
-## 等价无穷小与导数问题
+## 导数求泰勒展开式问题
 
-$$f^{(k)}(x_0)存在，低阶导均为0，则f(x)\sim f^{(k)}(x_0)x^k\\
-即f^{(k)}(x_0)存在，且低阶导均为0，则f(x)\sim ax^k\Leftrightarrow  f^{(k)}(0)=ak!$$
+$$f^{(k)}(x_0)=a_i,i,k=1,2,\cdots,f(x)=\sum_{i=1}^n a_i(x-x_0)^i,i=1,2,\cdots$$
+
+$$f^{(k)}(x_0)存在，低阶导均为0，则f(x)\sim \frac{f^{(k)}(x_0)}{k!}x^k\\
+即f^{(k)}(x_0)存在，且低阶导均为0，则f(x)\sim ax^k\Leftrightarrow  f^{(k)}(x_0)=ak!$$
+
 
 ## 高阶无穷小求导函数
-$$\not\Leftrightarrow$$
-幂函数求导函数
+$$\not\Leftrightarrow
+幂函数求导函数$$
 
 $$f(x)=x^{20}\sin\frac{1}{x}$$
 $$\left\{
@@ -1180,8 +1188,8 @@ $$指数化：y=e^{v\ln u}$$
 $$对数化：\ln y=v\ln u（定义域变小，函数对应关系不变）$$
 
 ## 反函数求导
-一阶导（y=f(x)可导，且f'(x)≠0）
-二阶导（y=f(x)二阶可导，且f'(x)≠0）
+
+一阶 y=f(x)可导，且f'(x)≠0;  二阶 y=f(x)二阶可导，且f'(x)≠0
 
 **注意因、自变量对应**
 $$一阶导：\varphi'(y)=\frac{1}{f'(x)} $$
@@ -1232,14 +1240,15 @@ $$法线方程：y-f(x_0)=-\frac{1}{f'(x_0)}(x-x_0)$$
 $$1. \ 若f(x)在x=x_0处连续，\\ \ \ \ \ 且\lim\limits_{x_0\to x_0}\frac{f(x)-A}{x-x_0}=B,\\ \ \ \ \ 则f(x_0)=A,f'(x_0)=B$$
 $$2. \ y=f(x)在x_0处可导，y=g(x)在x_0处连续但不可导，则\\
 \ \ \ F(x)=f(x)\cdot g(x)可导的充分必要条件是f(x_0)=0\\
-\star\ 证明：\lim\limits_{x\to x_0}\frac{f(x)g(x)-f(x_0)g(x_0)}{x-x_0}=\lim\limits_{x\to x_0}\frac{f(x)g(x)-f(x_0)g(x)+[f(x_0)g(x)-f(x_0)g(x_0)]}{x-x_0}\\=\lim\limits_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}g(x)+\lim\limits_{x\to x_0}\frac{g(x)-g(x_0)}{x-x_0}f(x_0)=f'(x_0)g(x_0)+\lim\limits_{x\to x_0}\frac{g(x)-g(x_0)}{x-x_0}f(x_0)$$
+{\color{grey}\star\ 证明：\lim\limits_{x\to x_0}\frac{f(x)g(x)-f(x_0)g(x_0)}{x-x_0}=\lim\limits_{x\to x_0}\frac{f(x)g(x)-f(x_0)g(x)+[f(x_0)g(x)-f(x_0)g(x_0)]}{x-x_0}}\\
+{\color{grey}=\lim\limits_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}g(x)+\lim\limits_{x\to x_0}\frac{g(x)-g(x_0)}{x-x_0}f(x_0)=f'(x_0)g(x_0)+\lim\limits_{x\to x_0}\frac{g(x)-g(x_0)}{x-x_0}f(x_0)}$$
 $$3. 若\varphi(x)在x=a处连续，\\ \ \ \ f(x)=|x-a|\varphi(x),\\
 \ \ \ \varphi(a)=0\Leftrightarrow f'(a) =0（函数分段定义法证得）$$
 $$4. \ f(x)=(x-x_0)^k|x-x_0|\\
 \ \ \ \ f(x)在x=x_0处 k阶可导 且为0，f^{(k+1)}(x_0)不存在（函数分段定义法证得）$$
 
 $$重难点：
-可导性判断，熟练常用结论；\quad
+可导性判断，熟练常用结论；\\
 定义求导，{\color{blue}\star 需灵活构造导数定义}$$
 
 ## 某点导函数不存在求导结论
@@ -1249,7 +1258,7 @@ $$例：求f'(0)\\
 f(x)=e^{x^{\frac{2}{3}}}-1-x^{\frac{2}{3}}\\
 f'(x)=\frac{2}{3}e^{x^{\frac{2}{3}}}\cdot \frac{1}{\sqrt[3]{x}}-\frac{2}{3}\cdot \frac{1}{\sqrt[3]{x}}\\
 $$
-[Card#ID/1XxPL#变限积分函数在间断点的可导性]
+[变限积分函数在间断点的可导性](#变限积分函数在间断点的可导性)
 
 ## 低阶求导技巧
 
@@ -1263,15 +1272,14 @@ $$2. 复杂乘除因式组合采用对数化求导 $$
 $$1. 泰勒公式（某一点导数）\\
 f(x)=a_0+a_1x+a_2x^2+\cdots +a_nx^n\\
 x=0处直接展开（好用）:\frac{f^{n}(0)}{n!}=a_n\\\\
-x=x_0处凑t+x_0，变量代换:
-f^{(n)}(x)|_{x=1}\xlongequal{x=t+1}f^{(n)}(t+1)|_{t=0}$$
+x=x_0处展开为(x-x_0)多项式：同理$$
 $$2. 导数奇偶性\\
 f^{(n)}(x)为奇函数\Rightarrow f^{(n)}(0)=0\\
 奇函数\quad f^{(2k)}(0)=0\\
 偶函数\quad f^{(2k+1)}(0)=0$$
 $$3. 找规律归纳法\\
 f(x)=(x^3-1)^n=(x-1)^n(x^2+x+1)^n\Rightarrow\\
-f^{(n)}(1)=n!(x^2+x+1)^n|_{x=1}=n!\\
+f^{(n)}(1)=n!(x^2+x+1)^n|_{x=1}=3^n \cdot n!\\
 \ \\
 f(x)=e^x\sin x\Rightarrow\\
 f^{(n)}(x)=e^x\sin(x+\frac{n\pi}{4})\cdot 2^{\frac{n}{2}}$$
@@ -2870,8 +2878,6 @@ dx,dy\neq0$$
 
 ## 连续、可偏导及可微之间的关系图
 
-**可微即曲面的光滑，但曲面的光滑相较曲线更为复杂，大致理解即可**
-
 ![](pic-advance-math\Markji_1751354341254.png)
 $${\color{blue}在定义域内，可微\Rightarrow 连续}\\
 一阶偏导连续（两个均连续）：一阶偏导仍是二元函数，其在某圆域内连续，即圆域内其一阶偏导相等$$
@@ -3284,7 +3290,7 @@ k=(\alpha等于特征根r_i)的个数$$
 $$f(x)=e^{\alpha x}[P_m(x)\cos\beta x+P_n(x)\sin\beta x]时，y^*=e^{\alpha x}[Q_l(x)\cos\beta x+R_l(x)\sin\beta x]x^k\\
 l=\max\{m,n\}\qquad
 k=(\alpha\pm\beta i等于特征根)的对数$$
-可能考查[Card#ID/1Yzk6#积化和差、和差化积]
+可能考查[积化和差、和差化积](#积化和差、和差化积)
 
 ## 解特征根注意
 $$(x-1)^3=0,\  x^3-1=0$$

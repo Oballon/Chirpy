@@ -997,9 +997,9 @@ $$一致性（相合性）：\hat{\theta}\xrightarrow {P}\theta(n\to \infty)\\
 
 ## 一致性判别
 
-思路一：[Card#ID/25TSx#切比雪夫不等式]
+思路一：[切比雪夫不等式](#切比雪夫不等式)
 $$\forall \varepsilon>0，当n\to \infty时，有\\ P\{|\hat{\theta}_1-\theta|\geqslant \varepsilon\}\leqslant \frac{D(\hat{\theta}_1)}{\varepsilon^2}=\frac{\frac{\theta^2}{3n}}{\quad\varepsilon^2\quad}\to 0$$
-思路二：[Card#ID/278vQ#大数定律]
+思路二：[大数定律](#大数定律)
 $$X_i独立同分布，E(X_i^2)=\theta，根据辛钦大数定律，有\\
 \hat{\theta}_n=\frac{1}{n}\sum_{i=1}^{n}X_i^2依概率收敛于\theta，即\lim\limits_{n\to \infty}P\{|\hat{\theta}_n-\theta|\geqslant\varepsilon\}=0$$
 
