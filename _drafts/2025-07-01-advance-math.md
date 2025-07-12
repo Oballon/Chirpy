@@ -1199,9 +1199,9 @@ $$二阶导：\varphi''(y)=-\frac{f''(x)}{[f'(x)]^3}$$
 （两种方法）
 
 **特点：导函数会“耦合”自变量、因变量**
-$$一阶导：隐函数存在定理（简便）\\
+$$隐函数存在定理（一阶导简便）\\
 F(x,y)=0,\ \frac{dy}{dx}=-\frac{F'_x}{F'_y}$$
-$$二阶导：方程两边同时自变量求导（不一定）\\
+$$方程两边同时自变量求导\\
 （某点的导数，不必整理，代入简便）$$
 $$技巧：利用原方程化简\quad xe^{f(y)}=e^y，求\frac{d^2y}{dx^2}\\
 $$
@@ -1291,13 +1291,14 @@ $$4. 莱布尼茨高阶导数公式，含多项式k项后为零\\
 ## 考情分析
 
 $$难点（不等式证明）：拉格朗日中值、泰勒中值\\
+中值定理统一前提：闭区间连续，即区间有界函数
 $$
 
 ## 介值定理
 
 $$f(x)在[a,b]连续，\\
 m\leqslant\mu \leqslant M,\ \exist\ \xi\in[a,b],\ 使f(\xi)=\mu\\
-f(x_1)\leqslant\mu \leqslant f(x_2),\ \exist\ \xi\in[x_1,x_2],\ 使f(\xi)=\mu$$
+f(x_1)\leqslant\mu \leqslant f(x_2),\ \exist\ \xi\in[x_1,x_2]或[x_2,x_1],\ 使f(\xi)=\mu$$
 
 ## 平均值定理
 
@@ -1380,10 +1381,12 @@ f'(\xi)=\frac{f(b)-f(a)}{b-a}（斜率两点式）
 \end{array}
 \right.$$
 
+$${\color{grey}辅助函数（罗尔定理）：F(x)=f(x)-f(a)-\frac{f(b)-f(a)}{b-a}(x-a)}$$
+
 ## 柯西中值定理
 
 **柯西中值定理不是两个拉格朗日相除**
-$$f(x)在\left\{
+$$f(x),g(x)在\left\{
 \begin{array}{l}
 [a,b]上连续\\
 \\
@@ -1393,6 +1396,8 @@ g'(x)\neq0
 \end{array}
 \right.$$
 $$\exists \ \xi\in(a,b),使得\ \frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}$$
+
+$${\color{grey}辅助函数（罗尔定理）： F(x)=f(x)-\frac{f(b)-f(a)}{g(b)-g(a)}g(x)}$$
 
 ## 积分中值定理及推论
 
@@ -1443,6 +1448,7 @@ H(x)=\int_a^xf(t)g(t)dt,\quad R(x)=\int_a^xg(t)dt\\
 ## 泰勒公式
 
 **注意泰勒公式的条件**
+
 **带拉格朗日余项：**
 $$f(x)在U(x_0)内(n+1)阶可导，对任意x\in U(x_0)\\
 
@@ -1495,7 +1501,8 @@ f(x)在[a,b]上可导\\
 \\
 f'_+(a)\neq f'_-(b)
 \end{array}
-\right.
+\right.\\
+
 当\mu介于f_+'(a),f'_-(b)之间时，\\
 
 \exists\ \xi\in(a,b),使得f'(\xi)=\mu\\
@@ -1521,21 +1528,23 @@ $$\left.
 \right\}$$
 $$\left.
 \begin{array}{l}
-\Delta:\int_a^xf(t)dt
+\Delta:\int_a^x\Delta dt
 
 \end{array}
 \right.$$
-$$注：(\Delta+b)'=\Delta'$$
+$$注：(\Delta+b)'=\Delta'\\
+罗尔定理f'(\xi)=0取部分即可\\
+拉格朗日f'(\xi)=\mu 具体分析$$
 
 ## 辅助函数构造经验
 
 1. 辅助函数不唯一（与条件不一定相通）
 2. 共同成分可能被消去，注意观察
 3. 阶数相差大于一，考虑相消（一般为加减）
-$$f''(\xi)=f(\xi)\Rightarrow e^\xi[f''(\xi)+f'(\xi)]=e^\xi[f'(\xi)+f(\xi)]$$
+$$f''(\xi)=f(\xi)\rightarrow f''(\xi)+f'(\xi)=f'(\xi)+f(\xi)$$
 4. 善用除法构造ln函数，借用不定积分构造辅助函数
 $$f'(\xi)+(1-\xi) f(\xi)=0\rightarrow \frac{f'(x)}{f(x)}+(1-x)=0\\
-\ln\Delta（取\ln内函数即可；仅找辅助函数而已，不加绝对值无碍）$$
+\ln\Delta（罗尔定理仅取\ln内函数即可；仅找辅助函数而已，不加绝对值无碍）$$
 
 ## 中值证明选择框架
 零点定理、介值定理、费马定理、罗尔定理、拉格朗日中值定理、柯西中值定理、泰勒中值
@@ -1581,7 +1590,7 @@ $$若f(x)在x=x_0处连续，且\lim\limits_{x_0\to x_0}\frac{f(x)-A}{x-x_0}=B�
 
 ## 根的唯一性证明
 
-$$零点定理+单调性$$
+$$前提连续，零点定理+单调性或反证$$
 
 ## 双中值证明
 
@@ -1683,13 +1692,16 @@ $$
 ## 考情分析
 
 难点：抽象函数各阶导数与极值点，拐点，单调性的判定问题
+
 条件多，不易分清
+
 经常求各阶导数，繁琐
 
 ## 极值的定义
 
 $$f(x)在U(X_0)内有定义，对于任意x\in \mathring{U}(x_0,\delta),\ \ \ f(x)<f(x_0)(或f(x)>f(x_0))，则称f(x_0)为极值$$
-$$注：定义区间端点无法取到极值\\
+$$注：闭区间端点无法取到极值\\
+开区间端小邻域内无法取到极值（无确定点）\\
 常函数无法取到极值
 $$
 
@@ -1697,7 +1709,7 @@ $$
 
 $$设x_0为f(x)在定义域内一点，若对于f(x)定义域内任一异于x_0的一点x，均有\\
 f(x)\leqslant f(x_0)(或f(x)\geqslant f(x_0)),则称f(x_0)为f(x)最值$$
-$$注：开区间端点无法取到最值\\
+$$注：开区间端小邻域内无法取到最值（无确定点）\\
 若为最值段，则可取到无限个最值点$$
 
 ## 拐点的定义
@@ -1740,8 +1752,8 @@ $$凸: f(\frac{x_1+x_2+\cdots+x_n}{n})>\frac{f(x_1)+f(x_2)+\cdots+f(x_n)}{n}$$
 **必要条件：**
 $$若x_0为极值点，且f'(x_0)可导，则f'(x_0)=0$$
 **充分条件：**
-$$f(x)在x=x_0连续，在\underline{}\mathring{U}(x_0,\delta)内可导，f'(x)左右变号$$
-$$f(x)在x=x_0处二阶可导，且f'(x_0)=0,f''(x_0)\neq0\\(或\mathring{U}(x_0,\delta)内，仅在x_0处，f''(x)=0)，则\\
+$$1.\ f(x)在x=x_0连续，在\underline{}\mathring{U}(x_0,\delta)内可导，f'(x)左右变号$$
+$$2.\ f(x)在x=x_0处二阶可导，且f'(x_0)=0,f''(x_0)\neq0\\(或\mathring{U}(x_0,\delta)内，仅在x_0处，f''(x)=0)，则\\
 \begin{array}{}
 \left\{
 \begin{array}{l}
@@ -1756,7 +1768,7 @@ f''(x)\leqslant0,极大值
 \end{array}
 \right.
 \end{array}$$
-$$f(x)在x=x_0处n阶可导，且f^{(m)}(x_0)=0(m=1,2,\cdots,n-1),f^{(n)}\neq0(n\geqslant 2)\\(或\mathring{U}(x_0,\delta)内，仅在x_0处，f^{(n)}(x)=0),则\\
+$$3.\ f(x)在x=x_0处n阶可导，且f^{(m)}(x_0)=0(m=1,2,\cdots,n-1),f^{(n)}\neq0(n\geqslant 2)\\(或\mathring{U}(x_0,\delta)内，仅在x_0处，f^{(n)}(x)=0),则\\
 \begin{array}{}
 n为偶数\left\{
 \begin{array}{l}
@@ -1780,14 +1792,14 @@ $$
 **必要条件：**
 $$若x_0为拐点，且f''(x_0)存在，则f''(x_0)=0$$
 **充分条件：**
-$$f(x)在x=x_0连续，在\underline{}\mathring{U}(x_0,\delta)内二阶可导，f''(x)左右变号$$
-$$f(x)在x=x_0处三阶可导，且f''(x_0)=0,f'''(x_0)\neq0\\ \bigg(或\mathring{U}(x_0,\delta)内，仅在x_0处，f'''(x)=0\left\{
+$$1.\ f(x)在x=x_0连续，在\underline{}\mathring{U}(x_0,\delta)内二阶可导，f''(x)左右变号$$
+$$2.\ f(x)在x=x_0处三阶可导，且f''(x_0)=0,f'''(x_0)\neq0\\ \bigg(或\mathring{U}(x_0,\delta)内，仅在x_0处，f'''(x)=0\left\{
 \begin{array}{l}
 f'''(x)\geqslant0\\
 f'''(x)\leqslant0
 \end{array}
 \right.\bigg)$$
-$$f(x)在x=x_0处n阶可导，且f^{(m)}(x_0)=0(m=2,3,\cdots,n-1),f^{(n)}\neq0(n \geqslant 3)，则\\当n为奇数时，x=x_0是拐点
+$$3.\ f(x)在x=x_0处n阶可导，且f^{(m)}(x_0)=0(m=2,3,\cdots,n-1),f^{(n)}\neq0(n \geqslant 3)，则\\当n为奇数时，x=x_0是拐点
 \\
 \bigg(或\mathring{U}(x_0,\delta)内，仅在x_0处，f^{(n)}(x)=0\left\{
 \begin{array}{l}
@@ -1908,8 +1920,8 @@ $$1. 方程变形，令k=F(x)=-2x^3+9x^2-12x\\
 $$2y^3-2y^2+2xy-x^2=1$$
 
 $$一般用第二充分条件：\\
-f'(0)=0,且f''(0)\neq0\\
-f''(0)=0,且f'''(0)\neq0\\
+极值点：f'(0)=0,且f''(0)\neq0\\
+拐点：f''(0)=0,且f'''(0)\neq0\\
 \ \\
 F'_y=0时，定义法讨论，对方程进行分析$$
 
@@ -1946,6 +1958,7 @@ $$f^{(n)}(x)=0至多有k(k\geqslant0)个根，则f(x)=0至多有k+n个根\\
 ## 考情分析
 
 收录一般微分不等式、积分不等式式的判定方法
+
 较复杂情形与中值定理联系颇深，归于中值定理方法中
 
 ## 具体型不等式判定
@@ -1973,13 +1986,6 @@ b-a-\frac{f(b)}{f'(b)}=\frac{f(b)-f(a)}{f'(\xi)}-\frac{f(b)}{f'(b)}=\frac{f(b)}{
 \right.$$
 **3. 泰勒中值展开：**
 $$f(x)二阶可导，f(0)=0，f'(0)>0，f''(x)>0，判f(0) \diamond f(\frac{1}{2})$$
-
-## 一般不等式（李六）
-
-**根据题目分析转化，非考研专属考点，灵活是关键**
-$$x_1x_2>e^2$$
-$$\int_0^xf(t)dt\geqslant\frac{1}{2}[xf(x)+x]$$
-$$\int_0^1(\frac{2}{3}-x)f(x)dx\geqslant \frac{1}{6}$$
 
 # ""不定积分""
 

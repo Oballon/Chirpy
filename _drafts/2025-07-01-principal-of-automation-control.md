@@ -139,7 +139,7 @@ $$注：（考查不会太复杂）\\
 \end{array}\right.\\
 \ \\
 \left\{\begin{array}{l}
-信号流图中比较点、引出点合并默认易有歧义\\
+信号流图中比较点、引出点合并易有歧义\\
 若同质的两点间增益为1，应视作一个点；非同质的两点间增益为1，不宜合并（易有歧义）
 \end{array}\right.\\
 
@@ -228,7 +228,8 @@ $$注：以初始状态为静止平衡状态分析，即弹簧弹力抵消重力
 ## 复杂力学典例2
 
 **灵活设中间变量，辅助分析**
-![](pic-principal-of-automation-control\Markji_1751374321708.jpg)
+
+<img src="pic-principal-of-automation-control\Markji_1751374321708.jpg" width="80%">
 
 # 时域分析
 
@@ -242,7 +243,9 @@ $$尾一型：G(s)=\frac{K(2s+1)(-3s+1)}{s^v(s+1)(-2s+1)(5s+1)}（便于计算�
 ## 一阶系统单位阶跃响应
 
 **图像重点记忆**
-![](pic-principal-of-automation-control\Markji_1751374341709.jpg)
+
+<img src="pic-principal-of-automation-control\Markji_1751374341709.jpg" width="50%">
+
 $$\Phi(s)=\frac{1}{Ts+1}（时间常数T）\quad
 c(t)=1-e^{-\frac{t}{T}}\\
 t=T\quad c(t)=63.2\%\\
