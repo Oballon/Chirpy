@@ -419,12 +419,19 @@ x(k)&=\underbrace{G^kx(0)}_{初始状态转移}+\underbrace{\sum_{j=0}^{k-1}G^{(
 ## 状态转移矩阵反解系统
 
 **考查状态转移矩阵的性质**
-![](pic-theory-of-modern-control\Markji_1751378147398.png)
+
+<div style="text-align: center;">
+<img src=pic-theory-of-modern-control\Markji_1751378147398.png width="80%">
+</div>
+
 $$\Phi(0)=I\quad \dot{\Phi}(0)=A（或A=\dot{\Phi}(t)\Phi(-t)）$$
 
 ## 求解状态转移矩阵典例
 
-![](pic-theory-of-modern-control\Markji_1751378160041.png)
+<div style="text-align: center;">
+<img src=pic-theory-of-modern-control\Markji_1751378160041.png width="90%">
+</div>
+
 $$e^{At}
 \left(\begin{array}{l}
 1&2\\
@@ -921,7 +928,10 @@ $$注：{\color{blue}涉及矩阵运算多；考查不会超过三阶}\\
 
 ## 传递函数不同能控、能观性实现
 
-![](pic-theory-of-modern-control\Markji_1751378200640.png)
+<div style="text-align: center;">
+<img src=pic-theory-of-modern-control\Markji_1751378200640.png width="90%">
+</div>
+
 $$可控不可观、可观不可控对应\frac{s+1}{s^2+3s+2}的可控、可观标准型实现即可$$
 $$不可控不可观实现：\frac{Y(s)}{U(s)}=\frac{s+1}{(s+1)(s+2)}=\frac{0}{s+1}+\frac{1}{s+2}\\
 不可控、不可观
@@ -1281,7 +1291,10 @@ $$
 
 ## 极点配置典例
 
-![](pic-theory-of-modern-control\Markji_1751378225556.png)
+<div style="text-align: center;">
+<img src=pic-theory-of-modern-control\Markji_1751378225556.png width="">
+</div>
+
 $$(1)\quad 写出状态空间表达式\\
 (2)\quad 当所有状态变量都用于反馈时，确定合适的反馈增益，使得r(t)=1时，e_{ss}=0，且\sigma\%<3\%$$
 $$(1)\quad \dot{x}=
@@ -1319,8 +1332,11 @@ $$两个方向
 
 ## 非线性方程的空间表达式
 
-![](pic-theory-of-modern-control\Markji_1751378241527.png)
-![](pic-theory-of-modern-control\Markji_1751378255854.png)
+<div style="text-align: center;">
+<img src=pic-theory-of-modern-control\Markji_1751378241527.png width="60%">
+<img src=pic-theory-of-modern-control\Markji_1751378255854.png width="60%">
+</div>
+
 $$令\left\{\begin{array}{}
 x_1=x\\
 x_2=\dot{x}

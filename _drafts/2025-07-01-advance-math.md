@@ -175,10 +175,12 @@ a^x(a>0且a\neq1),e^x \\
 \sin x,\cos x\\
 $$
 
-![](pic-advance-math\Markji_1751353264015.png)
-![](pic-advance-math\Markji_1751353816728.png)
-![](pic-advance-math\Markji_1751353825922.png)
-![](pic-advance-math\Markji_1751353833996.png)
+<div style="text-align: center;">
+<img src=pic-advance-math\Markji_1751353264015.png width="60%">
+<img src=pic-advance-math\Markji_1751353816728.png width="60%">
+<img src=pic-advance-math\Markji_1751353825922.png width="60%">
+<img src=pic-advance-math\Markji_1751353833996.png width="60%">
+</div>
 
 ## 函数图像2
 
@@ -187,15 +189,20 @@ $$\tan x,\cot x\\
 \arcsin x,\arccos x\\
 \arctan x,arccot x$$
 
-![](pic-advance-math\Markji_1751353948396.png)
-![](pic-advance-math\Markji_1751353963485.png)
-![](pic-advance-math\Markji_1751353980035.png)
-![](pic-advance-math\Markji_1751353993815.png)
+<div style="text-align: center;">
+<img src=pic-advance-math\Markji_1751353948396.png width="60%">
+<img src=pic-advance-math\Markji_1751353963485.png width="60%">
+<img src=pic-advance-math\Markji_1751353980035.png width="60%">
+<img src=pic-advance-math\Markji_1751353993815.png width="60%">
+</div>
 
 ## 取整函数
 
 $$x-1<[x] ≤x$$
-![](pic-advance-math\Markji_1751354029715.png)
+
+<div style="text-align: center;">
+<img src=pic-advance-math\Markji_1751354029715.png width="60%">
+</div>
 
 ## 摆线
 
@@ -206,7 +213,11 @@ x=2(t-\sin t)\\
 y=2(1-\cos t)
 \end{array}
 \right.\qquad a=2时$$
-![](pic-advance-math\Markji_1751354091294.png)
+
+<div style="text-align: center;">
+<img src=pic-advance-math\Markji_1751354091294.png width="60%">
+</div>
+
 $$a代表半径，t代表旋转角度，
 几何意义\left\{
 \begin{array}{l}
@@ -224,13 +235,19 @@ x=a\cos^3 t\\
 y=a\sin^3 t
 \end{array}
 \right.\quad 顶点距离原点为a$$
-<img src="pic-advance-math\Markji_1751354129262.png" width="30%">
+
+<div style="text-align: center;">
+<img src="pic-advance-math\Markji_1751354129262.png" width="20%">
+</div>
 
 ## 双纽线
 
 $$直角坐标：(x^2+y^2)^2=2a^2(x^2-y^2)\\
 极坐标：r^2=2a^2\cos2\theta$$
-![](pic-advance-math\Markji_1751354158851.png)
+
+<div style="text-align: center;">
+<img src=pic-advance-math\Markji_1751354158851.png width="30%">
+</div>
 
 ## 常见几何计算公式
 
@@ -535,7 +552,7 @@ $$显式：
 （加减乘除，变上限积分）
 
 <!-- **关键在于不定式** -->
-加减慎用；若无加减，乘除直接用
+加减慎用（相消项决定）；若无加减，乘除直接用
 
 **所给函数均连续**
 $$非零因子常数化：\\
@@ -546,7 +563,7 @@ $$非零因子常数化：\\
 （加减乘除，复合函数，变上限积分）
 
 <!-- **关键在于不定式** -->
-加减慎用；若无加减，乘除直接用、复合函数（复合函数各层均无穷小的前提下，由外向内替换）
+加减慎用（相消项决定）；若无加减，乘除直接用、复合函数（复合函数各层均无穷小的前提下，由外向内替换）
 
 **所给函数均连续**
 $$等价无穷小替换：\\
@@ -717,6 +734,8 @@ $$注：\lim\limits_{n\to \infty}\frac{2^n\cdot n!}{n^n}=0;\quad
 
 $$先判上下界，再判单调性（单调性判断多数情况依赖上下界，上下界依赖单调性较少）$$
 
+$$注：无需严格单调$$
+
 ## 数列递推关系处理（不等式）
 
 **上下界：**
@@ -772,7 +791,10 @@ $$由x_{n+1}=f(x_n)型单增递推式变化规律可知（见下图），x_n极�
 $$f'(x)<0,\{x_n\}不单调，振荡$$
 $$即使f(x)不单调，\{x_n\}也可能单调（数列值域只落在f(x)单调区间内）$$
 $$\{x_n\}增减性与f(x)的关系$$
-![](pic-advance-math\Markji_1751354211654.png)
+
+<div style="text-align: center;">
+<img src=pic-advance-math\Markji_1751354211654.png width="60%">
+</div>
 
 ## 递归处理技巧
 
@@ -963,7 +985,11 @@ $$
 
 $$\Delta y=f'(x_0)\Delta x+\circ(\Delta x)\\
 线性主部：f'(x_0)\Delta x$$
-![](pic-advance-math\Markji_1751354284917.png)
+
+<div style="text-align: center;">
+<img src=pic-advance-math\Markji_1751354284917.png width="60%">
+</div>
+
 $$注：光滑指无穷阶可导的性质，光滑一定可微\\
 一阶可微等价于一阶可导（高维不然）$$
 
@@ -1196,7 +1222,7 @@ $$一阶导：\varphi'(y)=\frac{1}{f'(x)} $$
 $$二阶导：\varphi''(y)=-\frac{f''(x)}{[f'(x)]^3}$$
 
 ## 隐函数求导
-（两种方法）
+（两种方法，灵活选择）
 
 **特点：导函数会“耦合”自变量、因变量**
 $$隐函数存在定理（一阶导简便）\\
@@ -1400,6 +1426,8 @@ $$\exists \ \xi\in(a,b),使得\ \frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\x
 $${\color{grey}辅助函数（罗尔定理）： F(x)=f(x)-\frac{f(b)-f(a)}{g(b)-g(a)}g(x)}$$
 
 ## 积分中值定理及推论
+
+**积分中值又称函数均值**
 
 $$f(x)在[a,b]上连续\\
 \exists \ \xi\in[a,b],使得
@@ -1666,9 +1694,9 @@ $$
 
 $$\star \star求解\lim\limits_{x\to 0}\theta(x)问题$$
 
-拉格朗日中值、泰勒中值
+**具体型：解出\theta(x)求极限**
 
-**根据所给条件将 θ(x) “调出来”**
+**抽象型：根据所给条件将 θ(x) “调出来”**
 $$双式结合\left\{\begin{array}{l}
 拉格多次展开，结合\\
 泰勒不同阶展开,结合
@@ -1993,13 +2021,15 @@ $$f(x)二阶可导，f(0)=0，f'(0)>0，f''(x)>0，判f(0) \diamond f(\frac{1}{2
 
 1. 只有f(x)连续时，才考原函数相关性质
 2. 不定积分只考三大方法：凑微分法、换元积分法、分部积分法
-不定积分计算很有限，所求均是**人为构造**出来的，三大方法掌握到位，**把握好切入点**
+
+不定积分计算偏大，所求均是**人为构造**出来的，三大方法掌握到位，**把握好切入点**
 
 ## 章节概述
 
 1. 不定积分与定积分关系：
 关联性极其弱，仅在牛顿-莱布尼茨公式中有关联
-2. 不定积分理论薄，极考计算;
+2. 不定积分理论薄，**极考计算**
+
 **不定积分核心在于凑基本积分公式的形式，不同解法间不甚相通**
 
 ## 不定积分书写规范
@@ -2011,7 +2041,7 @@ $$\int f(x)dx=F(x)+C（C为任意常数）$$
 $$如果在{\color{blue}区间I}上，可导函数F(x)的导函数为f(x)，即对任一x\in I，都有F'(x)=f(x)\\
 则称F(x)为f(x)在区间I上的原函数,
 称\int f(x)dx=F(x)+C为f(x)在区间I上的不定积分$$
-$$注：定义区间\neq定义域，定义区间为一个区间，仅是定义域的子集\\
+$$注：定义区间\neq定义域，{\color{blue}区间是连续的}，仅是定义域的子集\\
 求原函数的过程应以不改变f(x)定义区间为前提（原函数之间应只差常数）\\
 1. 三角函数变形（非恒等变形）可能会对间断点产生影响，姑且不计\\
 2. \ln|x|去绝对值号：在不改变函数定义域的情况下，直接去掉
@@ -2031,7 +2061,7 @@ f(x)在区间I内均有定义，则\\
 \right.\\
  \ \\
 f(x)在区间I内存在{\color{blue}无定义点}，则区间I不存在原函数，可讨论各分段的原函数$$
-$$注：\int\frac{1}{x}dx=\ln|x|+C即为原函数（定义区间上，区间一定是连续的）
+$$注：\int\frac{1}{x}dx=\ln|x|+C仅在(-\infty,0)或(0,+\infty)上存在原函数（区间一定是连续的）
 $$
 
 ## 原函数的奇偶性、周期性
@@ -2103,7 +2133,7 @@ $$\bigg[\int f(x)dx\bigg]'=f(x) \quad \int f'(x)dx=f(x)+C,\quad \int d[f(x)]=f(x
 (公式已成，说明可导、存在原函数)  $$
 $${\color{blue}\left(\int f(e^x)dx\right)'=f(e^x)}\quad
 {\color{blue}\left(\int f'(e^x)dx\right)'=f'(e^x)}\quad
-{\color{blue}\left(\int d[f(e^x)]\right)'=f(e^x)}$$
+{\color{blue}\int d[f(e^x)]=f(e^x)}$$
 
 ## 原函数性质
 
@@ -2305,6 +2335,7 @@ e^{ax}&\sin bx\end{array}\right|}{a^2+b^2}+C$$
 
 ## 分部积分表格法
 
+$$\int uv dx $$
 $$\begin{array}{c|c|c|c|c|}
 \hline
 u的各阶导数& u & u' & u'' & \cdots & \begin{array}{lr}u^{(n+1)}\\&(-1)^{n+1}\end{array}\\
@@ -2331,7 +2362,7 @@ $$选择题，直接选项求导（稳定）$$
 
 **复合函数：**
 $$f(\ln x)=\frac{\ln(1+x)}{x},求\int f(x)dx（令x=\ln t,参考前式变量代换即可）$$
-$$其余求解类型，解f(x)即可$$
+$$其余求解类型，或解f(x)$$
 **积分变量对应：**
 $$\quad\int f(x)dx=\frac{\sin x}{x}+C\\
 \Rightarrow \int f(ax)dx=\int \frac{f(ax)}{a}d(ax)=\frac{\sin(ax)}{a^2x}+C$$
@@ -2378,7 +2409,7 @@ $$\frac{\cos x}{\sin x+\cos x}
 
 ## 考情分析
 
-1. 分为两个体系：固有定积分代入（重点）、牛莱体系求原函数
+分为两个体系：固有定积分代入（重点）、牛莱体系求原函数
 
 已知积分，构造求积分
 
@@ -2413,7 +2444,7 @@ f(x)在[a,b]上有界，且只有有限个间断点，则\int_a^bf(x)dx存在$$
 ## 定积分重要细节
 
 $$f(x)有界，\int_{a^-}^af(x)dx=0\\
-瑕点在一点的积分值难以分析
+注：瑕点在一点的积分值难以分析
 $$
 
 ## 常用积分值记忆
@@ -2431,13 +2462,11 @@ $$\int_0^{\pi}\sin x\ dx=2（一个拱），
 
 $$m(b-a)\leqslant\int_a^bf(x)dx\leqslant M(b-a)$$
 
-## 积分中值又称函数均值
-
 ## 定积分的性质
 
-**函数、区间的线性叠加性**
 $$\int_a^b[\alpha f(x)+\beta g(x)]=\alpha\int_a^bf(x)dx+\beta\int_a^bg(x)dx$$
 $$\int_a^bf(x)dx=\int_a^cf(x)dx+\int_c^bf(x)dx（c为任意常数）$$
+$$\int_a^b f(x)dx\quad （若b<a，积分微元dx为负）$$
 
 ## 定积分不等式
 
@@ -2459,9 +2488,12 @@ $$\int_0^\frac{\pi}{2}\sin^nx\ dx=\int_0^\frac{\pi}{2}\cos^nx\ dx=
 ## 对称区间定积分
 
 **与轮换对称性本质相同**
-$$\int_{-a}^af(x)dx\xlongequal{函数处理}\frac{1}{2}\int_{-a}^af(x)+f(-x)dx\xlongequal{区间处理}\int_0^af(x)+f(-x)dx$$
+$$\int_{-a}^af(x)dx\xlongequal{函数处理}\int_{-a}^af(-x)dx=\frac{1}{2}\int_{-a}^af(x)+f(-x)dx$$
+$$\xlongequal{区间处理}\int_0^af(x)+f(-x)dx$$
 $$奇零偶倍：
 \int_{-a}^{a}f(x)dx\xlongequal{f(x)\  奇}0\qquad \int_{-a}^{a}f(x)dx\xlongequal{f(x)\  偶}2\int_{0}^{a}f(x)dx$$
+
+<!-- [轮换对称性](#第一型线面积分、重积分轮换对称性) -->
 
 ## 对称函数定积分
 $$f(x)关于x=I对称\\
@@ -2580,7 +2612,7 @@ $$\Phi(x)=\int_0^xf(x)dx$$
 
 $$1. f(x)在[a,b]可积，\Phi(x)在[a,b]上连续\\
 2. f(x)在[a,b]连续，\Phi(x)在[a,b]上可导\\
-3. f(x)在[a,b]可导，\Phi(x)在[a,b]上k+1阶可导$$
+3. f(x)在[a,b]k阶可导，\Phi(x)在[a,b]上k+1阶可导$$
 
 ## 变限积分函数在间断点的可导性
 $$\Phi(x)=\int_a^xf(t)dt$$
@@ -2603,17 +2635,17 @@ $$f(x)\ \ \ 偶
 \int_0^af(x)dx=0 \Rightarrow \int_a^xf(t)dt=\int_0^xf(t)dt\Rightarrow\int_a^xf(t)dt \quad奇\\
 \end{array}
 \right.$$
-$$f(x)\ \ T  \quad 且 \quad \int_0^T f(x)dx=0 \Longleftrightarrow \int_0^x f(t)dt \ \ \ \ T$$
+$$f(x)\ \ T  \quad 且 \quad \int_0^T f(x)dx=0 \Longleftrightarrow \int_0^x f(t)dt \quad T$$
 
 ## 变限积分“被积函数含积分上限”情形
-加减型、复合型
 
 **加减型：**
 $$\int_a^x(x-t)f(t)dt=x\int_a^xf(t)dt-\int_a^xtf(t)dt$$
 **复合型：**
 $$\int_0^xtf(x^2-t^2)dt,令u=x^2-t^2,得\frac{1}{2}\int_0^{x^2}f(u)du$$
 $$\int_0^3x\sqrt{9-x^2t^2}\ dt \ \ \ 令u=xt, 得 \int_0^{3x}\sqrt{9-u^2}du\\
-（注意\frac{1}{x}情形，需分类讨论）$$
+（注意\frac{1}{x}情形，需分类讨论）\\
+\int_0^x[e^{(t-x)^2}-1]\sin t dt\quad 令u=t-x,得\int_{-x}^0[e^{u^2}-1]\sin(u+x)du\quad 拆\sin(u+x)$$
 $$注：F(x)=\int_a^xf(x)+g(u)du\\
 F'(x)=[f(x)(x-a)]'+g(x)\neq f(x)+g(x)$$
 
@@ -2638,6 +2670,7 @@ $$巧用\int_a^x f(t)dt表示f(x)的原函数$$
 ## 定积分与反常积分区别
 
 定积分：区间有限（闭区间），函数有界，又称黎曼积分（黎曼关于定积分的理论存在不完备的缺陷）
+
 反常积分：区间无限，或函数无界，又称广义积分
 
 ## 反常积分的敛散性
@@ -2652,7 +2685,8 @@ $$子区间:\\收敛+收敛=收敛\\
 发散+发散= 发散\\
 $$
 **反常积分任意子区间积分发散，称反常积分发散**
-**发散的反常积分一定存在**
+
+**发散的反常积分一定不存在**
 $$\int_{-1}^{1}\frac{1}{x}\neq0\ 不收敛$$
 
 ## 反常积分分析思路
@@ -2790,7 +2824,7 @@ $$故I=\frac{\sqrt{\pi}}{2}$$
 
 旋转体只考沿坐标轴旋转
 
-## 旋转体几何计算公式
+## 几何计算公式
 
 **两类旋转体体积：**
 $$饼状微元：V=\int_a^b\pi[f(x)]^2dx\\
@@ -2798,6 +2832,8 @@ $$饼状微元：V=\int_a^b\pi[f(x)]^2dx\\
 V=\int_a^b2\pi |x|\cdot |f(x)|dx$$
 **旋转体侧面积：**
 $$饼状微元：S=\int_a^b 2\pi |f(x)|\cdot\sqrt{1+f'^2(x)}dx$$
+**扇形面积：**
+$$S=\int_a^b \frac{1}{2}r^2d\theta$$
 
 ## 物理量计算公式
 
@@ -2879,34 +2915,25 @@ $$极值：f(x_0,y_0)$$
 ## 微分因变量可为0，微分自变量不可为0
 
 $$函数z=z(x,y)\\
-dz=0,dz\neq0\\
-dx,dy\neq0$$
+dz=0或dz\neq0\\
+但dx,dy\neq0$$
 
 ## 连续、可偏导及可微之间的关系图
 
-![](pic-advance-math\Markji_1751354341254.png)
+<div style="text-align: center;">
+<img src=pic-advance-math\Markji_1751354341254.png width="80%">
+</div>
+
 $${\color{blue}在定义域内，可微\Rightarrow 连续}\\
-一阶偏导连续（两个均连续）：一阶偏导仍是二元函数，其在某圆域内连续，即圆域内其一阶偏导相等$$
+一阶偏导连续（两个均连续）：一阶偏导仍是二元函数，其在某圆域内连续$$
 
-## $f'_x(x_0,y_0)$存在,$f'_y(x_0,y_0)$连续，则$f(x_0,y_0)$可微
-
-$$向定义式靠近：\Delta z=A\Delta x+B\Delta y+\circ(\rho)\\
-\Delta z= f(x_0+\Delta x,y_0+\Delta y)- f(x_0,y_0)\\
-\quad \ \ \ =[f(x_0+\Delta x,y_0+\Delta y)-f(x_0+\Delta x,y_0)]+[f(x_0+\Delta x,y_0)-f(x_0,y_0)]\\
-$$
-$$\quad\quad f(x_0+\Delta x,y_0+\Delta y)-f(x_0+\Delta x,y_0)\\
-\xRightarrow{拉格}f'(x_0+\Delta x,\xi)\Delta y\ \ (\xi\in(y_0+\Delta y,y_0))\\
-\xlongequal{连续}f'(x_0,y_0)\Delta  y$$
-$$\quad \ f'_x(x_0,y_0)=\lim\limits_{(x,y)\to (x_0,y_0)}\frac{f(x_0+\Delta x,y_0)-f(x_0,y_0)}{\Delta x}=A\\
-\Rightarrow f(x_0+\Delta x,y_0)-f(x_0,y_0)=A\Delta x+\circ(\Delta x)$$
-$$一阶偏导连续\Rightarrow 可微\quad （同理可证）$$
+$$小结论：f'_x(x_0,y_0)存在,f'_y(x_0,y_0)连续，则f(x_0,y_0)可微（备用知识点有证明）$$
 
 ## 隐函数存在定理
 
 $$设函数F(x,y)在P(x_0,y_0)的某一邻域内具有连续偏导数，F(x_0,y_0)=0,F'_y(x_0,y_0)\neq0,\\则方程F(x,y)=0在(x_0,y_0)的某一邻域内能唯一确定一个连续且具有连续导数的函数y=f(x),\\它满足条件y_0=f(x_0),并有\frac{dy}{dx}=-\frac{F'_x}{F'_y}$$
 
 ## 隐函数求导公式
-二元，多元
 
 $$二元：
 \frac{dy}{dx}=-\frac{F'_x}{F'_y}（x,y为F的自变量，相互独立）$$
@@ -3007,19 +3034,19 @@ $$解出可疑点P_i，取f(P_i)最值即可$$
 ## 二元极限存在判定
 
 1. 直接计算
-2. 找特殊路径证不存在
-$$y=kx,y=kx^2$$
+2. 找特殊路径证不存在 $\quad y=kx,y=kx^2$
 
 ## 二元极限计算
 
 **二元极限的可计算性是有限的**
+
 **通常考无定义点、分段点处极限（初等多元函数在有定义点必连续）**
 1. 利用一元求极限
 （除洛必达与单调有界准则外，非零因子常数化、等价无穷小、泰勒展开等均可用）
 $$\lim\limits_{(x,y)\to (0,0)}\frac{y\sin(xy)}{\ln(1+xy)}=\lim\limits_{(x,y)\to (0,0)}\frac{y\cdot xy}{xy}=0\\
 $$
 （二元函数单变量求极限，可用洛必达，另一变量视作常数）
-$$\lim\limits_{x\to 0}\frac{2e^{x^2y}-e^x-e^{-x}}{x^2}\xlongequal{洛必达}\lim\limits_{x\to 0}\frac{4xye^{x^2y}-e^x+e^{-x}}{2x}=\cdots$$
+$$\lim\limits_{x\to 0}\frac{2e^{x^2y}-e^x-e^{-x}}{x^2}\xrightarrow{洛必达}\lim\limits_{x\to 0}\frac{4xye^{x^2y}-e^x+e^{-x}}{2x}=\cdots$$
 2. 利用夹逼准则（放缩）
 $$\lim\limits_{(x,y)\to (\infty,\infty)}\frac{x^2}{x^4+y^4}(0\leqslant\frac{x^2}{x^4+y^4}\leqslant\frac{1}{x^2})=0$$
 3. 极坐标法（转换坐标系，新坐标系下或许能计算）
@@ -3027,34 +3054,41 @@ $$\lim\limits_{(x,y)\to(0,0)}f(x,y)=\lim\limits_{\rho\to0}f(\rho\cos\theta,\rho\
 
 ## 多元微分“单函数”求导
 
-**显函数：**
-$$寻找函数中以f(x,y)表达的部分\\
-不含f(x,y)部分：\\
+**显函数：寻找函数中以f(x,y)表达的部分**
+$$不含f(x,y)部分：
 直接按求导习惯求导即可......\\
-含f(x,y)部分：\\
+含f(x,y)部分：
+\left\{\begin{array}{}
 1. 画出变量关系图\\
 2. 链式求导法则计算
+\end{array}\right.
 $$
 **隐函数：**
-$$隐函数求导法则（适用于一阶）
-$$
+$$隐函数求导法则（适用于一阶）$$
+
+**链式求导法则：**
+$$链式变量关系，一对多，偏导相加，逐级向后$$
+
 $$注：若二阶混合偏导连续，注意合并二阶混合偏导$$
 
 ## 多元微分“多函数”求导
 
 **导函数可能会“耦合”自变量、因变量**
+
 **方程组型求导（通用方法）：**
-$$1. 根据变量与方程组个数分析是“ \_\_”个“\_\_”元函数”\\
+$$
+\left\{\begin{array}{}
+1. 根据变量与方程组个数分析是“ \_\_”个“\_\_”元函数”\\
 2. 画出变量关系图\\
 3. 对方程组两边求导\\
 4. 解方程......
-$$
+\end{array}\right.$$
+
 **显函数+隐函数：**
 $$u=f(x,y,z),而\varphi(x^2,e^y,z)=0,y=\sin x,求\frac{du}{dx}\\
  \ \\
 y=g(x,z),函数z=z(x,y)由方程f(x-z,xy)=0确定,求\frac{dy}{dx}\\
- 视为y=g[x,z(x,y)]\\
-\ \\
+
 注意区别：
 \left\{
 \begin{array}{ll}
@@ -3066,14 +3100,13 @@ y=g(x,z),函数z=z(x,y)由方程f(x-z,xy)=0确定,求\frac{dy}{dx}\\
 ## 克拉默法则解方程组
 
 **齐次，非齐次均适用**
-ax + by = {\color{red}e}\\
+$$ax + by = {\color{red}e}\\
 cx + dy = {\color{red}f}$$
 $$\begin{bmatrix} a & b \\ c & d \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix}=\begin{bmatrix} {\color{red}e} \\ {\color{red}f} \end{bmatrix}$$
 $$x = \frac { \begin{vmatrix} \color{red}{e} & b \\ \color{red}{f} & d \end{vmatrix} } { \begin{vmatrix} a & b \\ c & d \end{vmatrix} } = { {\color{red}e}d - b{\color{red}f} \over ad - bc}$$
 $$y = \frac { \begin{vmatrix} a & \color{red}{e} \\ c & \color{red}{f} \end{vmatrix} } { \begin{vmatrix} a & b \\ c & d \end{vmatrix} } = { a{\color{red}f} - {\color{red}e}c \over ad - bc}$$
 
 ## 多元求“极值”与“最值”问题
-开区域极值、边界最值、闭区域最值
 
 $$开区域极值=无条件极值\\
 边界最值=条件最值\\
@@ -3091,7 +3124,6 @@ $$直接对方程求一阶偏导、二阶偏导\\
 F'_z=0为不可导点，定义法讨论，对方程进行分析$$
 
 ## 条件最值问题
-拉格朗日乘数法、反解消元法
 
 $$拉格朗日乘数法：若函数、条件均有轮换对称性，则对应变量相等（结论好用，虽有误）
 
@@ -3122,10 +3154,12 @@ $$坐标轴分段函数\\
 \end{array}
 \right.\\
 \ \\
+\begin{array}{l}
 f_x'(0,0)=\lim\limits_{x\to 0}\frac{f(x,0)-f(0,0)}{x}\\
 f_x'(x,0)=0\\
 f_x'(0,y)=\lim\limits_{x\to 0}\frac{f(x,y)-f(0,y)}{x}=\lim\limits_{x\to 0}\frac{(x^2+y^2)\sin\frac{1}{xy}}{x}\\
-f_x'(x,y)=2x\sin\frac{1}{xy}-\frac{1}{x^2y}(x^2+y^2)\cos\frac{1}{xy}$$
+f_x'(x,y)=2x\sin\frac{1}{xy}-\frac{1}{x^2y}(x^2+y^2)\cos\frac{1}{xy}
+\end{array}$$
 
 ## 二元函数二阶导
 
@@ -3137,25 +3171,28 @@ $$注：导函数可能用定义求得$$
 ## 考情分析
 
 **难点在于微分方程类型的识别**
+
 考试大纲要求：仅要求求通解，不要求求出全部解
 
 微分方程可结合性极强，可结合多种知识考查：
+
 多元微分关系形成微分方程、幂级数微分关系形成微分方程
+
 应用题型微分关系形成微分方程.......
 
  优先级：一阶线性 > 分离变量型 > 齐次型
+
  微分方程只考求解，按习惯计算即可，勿多想
 
 ## 微分方程可解性
 
 $$只有少数简单的微分方程可以求得解析解\\
-微分方程可解性较弱，故复杂题型也均属特殊构造，难点在于整理识别
-
-$$
+微分方程可解性较弱，故复杂题型也均属特殊构造，难点在于整理识别$$
 
 ## 变量分离型
 
 **分离变量、约分会改变定义域，但不要求求全部解**
+
 **除线性微分方程外，分离变量方法贯穿微分方程求解始终**
 $$\frac{dy}{dx}=f(x)g(y)$$
 
@@ -3252,7 +3289,8 @@ $$通解：若微分方程中含有独立的任意常数的个数等于微分方
 $$特解：不含任意常数的解称为微分方程的特解$$
 
 ## 线性微分方程解的性质
-一般线性、常系数线性
+
+**一般线性、常系数线性**
 
 $$全部解的构成：齐次通解+非齐次特解\\
 （除去“齐次通解因子”，“非齐次特解因子”唯一）$$
@@ -3322,8 +3360,6 @@ $$(1+y^2)^3=e^{2C_0}(1+x^2)\\
 $$
 
 ## 变量替换解微分方程
-
-常规型，特殊型
 
 **常规型：**
 $$\ \  1.  \ \frac{dy}{dx}=f(ax+by+c)\Rightarrow
@@ -3403,7 +3439,11 @@ f'(x)=\lim\limits_{\Delta x\to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}=\lim\limits
 ## 微分方程导数定义构造典例2
 
 $$正值可导函数f(x)满足\lim\limits_{t\to \infty}\left[\frac{f(x+\tan\frac{1}{t})}{f(x+\sin\frac{1}{t})}\right]^{t^3}=e^x,且f(0)=1,求f(x)$$
-![](pic-advance-math\Markji_1751354385159.jpg)
+
+<div style="text-align: center;">
+<img src=pic-advance-math\Markji_1751354385159.jpg width="50%">
+</div>
+
 $$注：
 导函数不一定连续，拉格朗日中值行不通$$
 
@@ -3590,17 +3630,6 @@ $$主要使用比较审敛法，
 
 $$\sum_{n=0}^{\infty}a_nx^n在x=x_1处收敛，对于满足|x|<|x_1|的一切x,幂级数\ \textbf{绝对收敛}$$
 $$\sum_{n=0}^{\infty}a_nx^n在x=x_2处发散，对于满足|x|>|x_1|的一切x,幂级数\ \textbf{发散}$$
-
-## 阿贝尔定理证明
-
-$$设x_0是\sum_{n=0}^{\infty}a_nx^n的收敛点，根据级数收敛的必要条件，有\\
-\quad\ \lim\limits_{n\to \infty}a_nx^n_0=0\\
-\Rightarrow|a_nx_0^n|\leqslant M\\
-\Rightarrow|a_n x^n|=|a_nx_0^n|\cdot\left|\frac{x^n}{x_0^n}\right|\leqslant M\left|\frac{x}{x_0}\right|^n\\
-故\  |x|<|x_0|时，\sum_{n=0}^{\infty}M\left|\frac{x}{x_0}\right|^n收敛，此时\sum_{n=0}^{\infty}|a_nx^n|收敛
-
-$$
-$$发散性质由反证法证得......$$
 
 ## 收敛半径的求法
 
@@ -3873,7 +3902,6 @@ $$点法式：A(x-x_0)+B(y-y_0)+C(z-z_0)=0$$
 $$截距式：\frac{x}{a}+\frac{y}{b}+\frac{z}{c}=1$$
 
 ## 空间曲线的切线与法平面
-参数方程、一般式方程
 
 $$参数方程\left\{
 \begin{array}{l}
@@ -4037,6 +4065,7 @@ z=0
 ## 考情分析
 
 一元定积分、二重积分、三重积分求原函数的难度逐渐递减
+
 两类曲线积分间、两类曲面积分间的转化灵活使用
 
 ## 方向余弦
@@ -4102,7 +4131,11 @@ z=r\cos\varphi\\
 dS=r^2\sin\varphi d\theta d\varphi
 \end{array}\right.\qquad
 \iint\limits_{\Sigma}f(x,y,z)dS=\iint f(r\sin\varphi \cos\theta,r\sin\varphi \sin\theta, r\cos\varphi)r^2\sin\varphi d\varphi d\theta$$
-![](pic-advance-math\Markji_1751354432597.png)
+
+<div style="text-align: center;">
+<img src=pic-advance-math\Markji_1751354432597.png width="70%">
+</div>
+
 $$积分区域\left\{\begin{array}{ll}
 球面：x^2+y^2+z^2=4z&\leftrightarrow \rho=4\cos\varphi\\
 锥面：
@@ -4296,7 +4329,10 @@ $$直接将r,\theta当作直角系变量，对应交换即可$$
 
 ## 常见曲面方程
 
-![](pic-advance-math\Markji_1751354474017.png)
+<div style="text-align: center;">
+<img src="pic-advance-math\Markji_1751354474017.png" width="60%">
+</div>
+
 $$注：\frac{x^2}{a^2}-\frac{y^2}{b^2}=1为左右开口，\frac{y^2}{a^2}-\frac{x^2}{b^2}=1为上下开口\quad y=\pm \frac{b}{a}x为渐近线$$
 
 ## 曲面方程的坐标平移
@@ -4424,7 +4460,6 @@ $$\Omega 是空间中的{\color{blue}单连通}区域，P(x,y,z),Q(x,y,z),R(x,y,
 
 ## 第二型曲线积分计算方法
 $$\int_L P(x,y)dx+Q(x,y)dy$$
-变量消元法、格林公式法、积分与路径无关
 
 **变量消元法（与投影法本质相同）：**
 $$ 直角坐标y=y(x)（a\rightarrow b）{\color{blue}（直角坐标x\to y\  一对多，注意分段）}\\
@@ -4451,9 +4486,9 @@ $$注：善用参数方程简化曲线积分计算（曲面积分不可）$$
 
 ## 第二型曲面积分计算方法
 $$\iint\limits_{\textbf{S}}P(x,y,z)dydz+Q(x,y,z)dzdx+R(x,y,z)dxdy$$
-投影代换法、高斯公式法
 
 **向第一型曲面积分转换时，切记“方向侧”对应，注意曲面的投影重叠**
+
 **投影代换法：**
 $$原始消元：变量消元法，对应代入，积分区域投影即可\\
 \iint\limits_{\textbf{S}}P(x,y,z)dydz=\pm\iint\limits_{D_{yz}}P[x(y,z),y,z]dydz\\
@@ -4468,9 +4503,9 @@ $$补面情形：非封闭曲面\\
 取\textbf{S}为有向封闭曲面x^2+y^2+z^2=\delta^2，{\color{blue}消去无定义点}$$
 
 ## 第二型空间曲线积分计算方法
-变量消元法、斯托克斯公式法
 
-**变量消元法（与投影法本质相同）：**变量消元法，对应代入，积分区域投影即可
+**变量消元法（与投影法本质相同）：变量消元法，对应代入，积分区域投影即可**
+
 $$参数方程
 \left\{
 \begin{array}{l}
@@ -4574,7 +4609,7 @@ $$x^2+(y-z)^2=(1-z)^2\quad 代入不同z，方程表示不同z处的圆\\
 
 # 横向知识点对比
 
-极限、级数、反常积分收敛对比
+**极限、级数、反常积分收敛对比**
 
 <!-- **子极限自变量趋向速度不一致** -->
 $$\begin{array}{lll}\lim\limits_{x\to \infty}f(x)+\lim\limits_{x\to \infty}g(x)&& \lim\limits_{x\to \infty}[f(x)+g(x)]&（收+收=收，收+发=发，发+发=不一定）\\
@@ -4628,6 +4663,19 @@ $$\begin{array}{ll}
 狄利克雷积分：
 $$\int _0^{+\infty}\frac{\sin x}{x}dx=\frac{\pi}{2}$$
 
+## $f'_x(x_0,y_0)$存在,$f'_y(x_0,y_0)$连续，则$f(x_0,y_0)$可微
+
+$$向定义式靠近：\Delta z=A\Delta x+B\Delta y+\circ(\rho)\\
+\Delta z= f(x_0+\Delta x,y_0+\Delta y)- f(x_0,y_0)\\
+\quad \ \ \ =[f(x_0+\Delta x,y_0+\Delta y)-f(x_0+\Delta x,y_0)]+[f(x_0+\Delta x,y_0)-f(x_0,y_0)]\\
+$$
+$$\quad\quad f(x_0+\Delta x,y_0+\Delta y)-f(x_0+\Delta x,y_0)\\
+\xRightarrow{拉格}f'(x_0+\Delta x,\xi)\Delta y\ \ (\xi\in(y_0+\Delta y,y_0))\\
+\xlongequal{连续}f'(x_0,y_0)\Delta  y$$
+$$\quad \ f'_x(x_0,y_0)=\lim\limits_{(x,y)\to (x_0,y_0)}\frac{f(x_0+\Delta x,y_0)-f(x_0,y_0)}{\Delta x}=A\\
+\Rightarrow f(x_0+\Delta x,y_0)-f(x_0,y_0)=A\Delta x+\circ(\Delta x)$$
+$$一阶偏导连续\Rightarrow 可微\quad （同理可证）$$
+
 ## 变量分离的两边积分法解释
 
 $$已知有微分方程：g(y)dy=f(x)dx\quad(1)\\
@@ -4644,6 +4692,17 @@ $$已知有微分方程：g(y)dy=f(x)dx\quad(1)\\
 \quad\quad\quad故(2)式满足(1)式\\
 \quad即(2)式为隐式解且为所有解
 $$
+
+## 阿贝尔定理证明
+
+$$设x_0是\sum_{n=0}^{\infty}a_nx^n的收敛点，根据级数收敛的必要条件，有\\
+\quad\ \lim\limits_{n\to \infty}a_nx^n_0=0\\
+\Rightarrow|a_nx_0^n|\leqslant M\\
+\Rightarrow|a_n x^n|=|a_nx_0^n|\cdot\left|\frac{x^n}{x_0^n}\right|\leqslant M\left|\frac{x}{x_0}\right|^n\\
+故\  |x|<|x_0|时，\sum_{n=0}^{\infty}M\left|\frac{x}{x_0}\right|^n收敛，此时\sum_{n=0}^{\infty}|a_nx^n|收敛
+
+$$
+$$发散性质由反证法证得......$$
 
 # 备用方法
 

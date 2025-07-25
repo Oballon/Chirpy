@@ -97,6 +97,10 @@ $$\begin{array}{l}串联分压：U_1=\frac{Z_1}{Z_1+Z_2}U & U_2=\frac{Z_2}{Z_1+Z
 $$运算放大器（正负极口）：u_+=u_-\quad i_+=i_-=0$$
 $$并联阻抗Z=\frac{Z_1Z_2}{Z_1+Z_2}\quad容阻并联Z=\frac{R}{sRC+1}$$
 
+$$重要技巧：戴维宁或诺顿等效\quad 三角、星型转换$$
+
+$$注：复杂电气网络无简单办法，或阻抗Z整理，或拉氏动态方程整理$$
+
 ## 力学系统公式及技巧
 
 $$\begin{array}{cl}
@@ -121,9 +125,10 @@ $$技巧：\\
 
 $$须将体现所有部件的微分方程列写完整$$
 
-## 方框图绘制注意
+## 方框图注意
 
-$$前馈上面画，反馈下面画$$
+$$前馈上面画，反馈下面画\\
+方框图等效变换不完全等效，输入输出间等效$$
 
 ## 梅森增益公式
 
@@ -207,13 +212,20 @@ $$注：方框图起不到辅助作用$$
 
 ## 电路网络典例
 
-<img src=pic-principal-of-automation-control\Markji_1751374229141.png width="39%"><img src=pic-principal-of-automation-control\Markji_1751374241740.png width="60%">
-$$灵活使用多路并联分流公式\\
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751374229141.png width="35%">
+<img src=pic-principal-of-automation-control\Markji_1751374241740.png width="50%">
+</div>
+
+$$\star灵活使用多路并联分流公式\\
 注意：并联支路，负载效应$$
 
 ## 力学系统典例
 
-![](pic-principal-of-automation-control\Markji_1751374277110.png)
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751374277110.png width="25%">
+</div>
+
 $$小结论（化简时直接写）：本质与分压、分流相反\\
 Y_0=\frac{F}{K_2}\quad
 Y_x=\frac{F}{K_2}+\frac{F}{Bs}\quad
@@ -222,14 +234,20 @@ Y_1=\frac{F}{K_2}+\frac{F}{Bs}+\frac{F}{K_1}$$
 ## 复杂力学典例1
 
 **复杂系统难以分析，分块列写动力学方程**
-![](pic-principal-of-automation-control\Markji_1751374296311.jpg)
+
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751374296311.jpg width="80%">
+</div>
+
 $$注：以初始状态为静止平衡状态分析，即弹簧弹力抵消重力$$
 
 ## 复杂力学典例2
 
 **灵活设中间变量，辅助分析**
 
+<div style="text-align: center;">
 <img src="pic-principal-of-automation-control\Markji_1751374321708.jpg" width="80%">
+</div>
 
 # 时域分析
 
@@ -244,7 +262,9 @@ $$尾一型：G(s)=\frac{K(2s+1)(-3s+1)}{s^v(s+1)(-2s+1)(5s+1)}（便于计算�
 
 **图像重点记忆**
 
-<img src="pic-principal-of-automation-control\Markji_1751374341709.jpg" width="50%">
+<div style="text-align: center;">
+<img src="pic-principal-of-automation-control\Markji_1751374341709.jpg" width="40%">
+</div>
 
 $$\Phi(s)=\frac{1}{Ts+1}（时间常数T）\quad
 c(t)=1-e^{-\frac{t}{T}}\\
@@ -307,10 +327,6 @@ $$t_s=\frac{3}{\xi\omega_n} (\Delta=0.05) , \ t_s=\frac{4}{\xi\omega_n} (\Delta=
 $$
 $$t_r=\frac{\pi-\beta}{\sqrt{1-\xi^2}\omega_n}\qquad （上升时间）$$
 
-## 动态性能指标计算器方法
-
-$$使用\textbf{{\color{red}=}}列方程，利用\text{solve}方法解一元方程$$
-
 ## 二阶系统动态性能与极点位置的关系
 
 $$借助实部\xi \omega_n,虚部\sqrt{1-\xi^2}\omega_n,\beta(\beta=\arctan\frac{\sqrt{1-\xi^2}}{\xi})判断\\
@@ -318,6 +334,8 @@ t_p,t_s,\sigma\%由以上构成$$
 $$工程最佳参数：\xi=\frac{\sqrt{2}}{2}=0.707\qquad \sigma\%=e^{-\pi}=4.3\%$$
 
 ## 稳定性定义
+
+**判断稳定性时，开环传递函数存在相同的零、极点一定不能消去**
 
 $$理论分析中：\\
 \begin{array}{}
@@ -330,11 +348,12 @@ $$理论分析中：\\
 只要右半平面，或虚轴上存在闭环极点，系统不稳定（临界稳定、不稳定）
 $$
 $$注：存在虚根\Leftrightarrow 临界稳定$$
-$$齐次连续线性时不变系统为临界稳定的充分必要条件是：\\
-系统传递函数中每个极点的实部都为非正值，\\
-且其中有一个或多个极点实部为零，\\
-且均为相异的单根，\\
-而其他的极点实部为负值$$
+
+$${\color{grey}齐次连续线性时不变系统为临界稳定的充分必要条件是：}\\
+{\color{grey}系统传递函数中每个极点的实部都为非正值，}\\
+{\color{grey}且其中有一个或多个极点实部为零，}\\
+{\color{grey}且均为相异的单根，}\\
+{\color{grey}而其他的极点实部为负值}$$
 
 ## 稳定判定方法
 
@@ -366,38 +385,35 @@ $$注：{\color{blue}劳斯判别法姑且用即可，勿深究各类情况}\\
 特殊情况：\\
 1. \ 0 (\varepsilon\rightarrow 0^+)继续计算，取极限判正负\\
  2. 全零行 \rightarrow 由上一行系数列写辅助函数P(s)，求导作为本行数值\\
-辅助方程P(s)的解是原特征方程D(s)解的一部分
+辅助方程P(s)的解是原特征方程D(s)解的一部分$$
 
-$$
+## 稳态误差定义
 
-## 连续域静态误差系数及稳态误差
+$$单位反馈H(s)=1，E(s)=R(s)-C(s)\\
+非单位反馈H(s)\neq1，E(s)=\frac{1}{H(s)}R(s)-C(s)\quad （梅森公式不可用）$$
 
-$$k_p,\  k_v, \  k_a \qquad
-e_{ssp}, \ e_{ssv},  \ e_{ssa}$$
+## 静态误差系数及稳态误差（单位反馈）
 
 **稳态误差计算前提：先判断稳定性**
+
 **静态误差系数法前提：无输入前馈**
-$$G(s)=G_1(s)H(s)=\frac{K}{s^v}\frac{(\tau_1s+1)\cdots(\tau_m+1)}{(T_1s+1)\cdots(T_ns+1)}\\
+$$G(s)=\frac{K}{s^v}\frac{(\tau_1s+1)\cdots(\tau_m+1)}{(T_1s+1)\cdots(T_ns+1)}\\
 \left\{\begin{array}{l}K为开环放大倍数\\ v为系统型别，即无静差度
 \end{array}\right.$$
-$$一般情形：\Phi_e(s)=\frac{s^v(T_1s+1)\cdots(T_n s+1)}{(T_1s+1)\cdots(T_ns+1)+K(\tau_1s+1)\cdots(\tau_2s+1)}\qquad 分子为s^v即代表系统型别$$
+
 **直接用“静态误差系数”计算稳态误差即可**
 $$通法：e_{ss}=\lim\limits_{s\to 0}s\cdot E(s)=\lim\limits_{s\to0}s\cdot R(s)\Phi_e(s)\\
 \ \\
 \begin{array}{ll}
 静态误差系数：&稳态误差：\\
-k_p=\lim\limits_{s\to0}G_1(s)H(s) &e_{ssp}=\frac{A}{1+k_p}&\lim\limits_{s\to0}\frac{A}{1+G_1(s)H(s)} \\
+k_p=\lim\limits_{s\to0}G(s) &e_{ssp}=\frac{A}{1+k_p}&\lim\limits_{s\to0}\frac{A}{1+G(s)} \\
 
-k_v=\lim\limits_{s\to0}sG_1(s)H(s) &e_{ssv} =\frac{A}{k_v}&\lim\limits_{s\to0}\frac{A}{sG_1(s)H(s)}\\
+k_v=\lim\limits_{s\to0}sG(s) &e_{ssv} =\frac{A}{k_v}&\lim\limits_{s\to0}\frac{A}{sG(s)}\\
 
-k_a=\lim\limits_{s\to0}s^2G_1(s)H(s)
-&e_{ssa}=\frac{A}{k_a}&\lim\limits_{s\to0}\frac{A}{s^2G_1(s)H(s)}
+k_a=\lim\limits_{s\to0}s^2G(s)
+&e_{ssa}=\frac{A}{k_a}&\lim\limits_{s\to0}\frac{A}{s^2G(s)}
 \end{array}（A为相对于单位输入的系数）$$
-$$注：{\color{blue}建议用定义法求稳态误差}，此法作补充（灵活运用）$$
 
-## 连续域稳态误差
-
-**稳态误差计算前提：先判断稳定性**
 **直接用梅森增益公式求传函**
 $$e_{ss}=e(\infty)=\lim\limits_{s\to 0}sE(s)=\lim\limits_{s\to 0}s\Phi_e(s)R(s)\\
 
@@ -479,7 +495,7 @@ $$\star输入前馈控制（提高系统型别，不影响系统稳定性）：\
 $$系统稳定：满足劳斯稳定条件，解参数范围、关系$$
 $$极点位于s=-a左侧：\\
 令s=s^*-a，拆开后对s^*使用劳斯判据，求参数范围\\
-注：g(s^*)=0缺项、存在负系数，则参数不存在
+注：g(s^*)=0缺项、存在正负系数，则参数不存在
 $$
 
 ## 高阶系统主导极点性能分析
@@ -500,7 +516,10 @@ $$极点：反应变慢， \sigma\%\downarrow\quad t_p\uparrow；随着极点向
 
 ## 响应曲线反得系统参数典例
 
-![](pic-principal-of-automation-control\Markji_1751374383156.png)
+<div style="text-align: center;">
+<img src="pic-principal-of-automation-control\Markji_1751374383156.png" width="80%">
+</div>
+
 $$\Phi(s)=\frac{K(s+a)}{s^v(Ts+1)+s+a}=\frac{K(s+a)}{Ts^{v+1}+s^v+s+a}\\
 e(\infty)=0\Rightarrow v\geqslant1\\
 系统稳定\Rightarrow v\leqslant2\\
@@ -514,7 +533,7 @@ $$注：稳定性容易被忽略（特征多项式不缺项等）$$
 
 # 根轨迹分析
 
-考情分析
+## 考情分析
 
 $$根轨迹校正不考\\
 \ \\
@@ -545,8 +564,6 @@ $$根轨迹绘制原理存在不确定情形，但考研不会出现$$
 **利用开环传递函数分析闭环根轨迹**
 $$\Phi(s)=\frac{G_1(s)}{1+G_1(s)H(s)}\\
 特征式\Delta=1+G_1(s)H(s)=0，即G_1(s)H(s)=-1\\
-注：根轨迹对系统没有要求，但基本只考察单位反馈（正、负），无前馈系统\\
-\ \\
 在复平面s域中，{\color{blue}以向量把握}\\
 模值条件：|G(s)H(s)|=\frac{k^*|s-z_1||s-z_2|\cdots|s-z_m|}{|s-p_1||s-p_2|\cdots|s-p_n|}=1\qquad (k^*:0\rightarrow +\infty)\\
 注：知s即可求k^*=\frac{|s-p_1||s-p_2|\cdots|s-p_n|}{{|s-z_1||s-z_2|\cdots|s-z_m|}}\\
@@ -631,7 +648,7 @@ G(s)与G^*(s)仅仅根轨迹相同，其他分析仍须使用G(s)$$
 $$提法：参数-\infty<k<+\infty的全根轨迹，或相角180\degree,0\degree的全根轨迹$$
 $$典例（参数范围未知）：G(s)=\frac{s+5}{s(s+\rho)}\quad 找出闭环系统临界阻尼时的\rho\\
 全根轨迹：G'(s)=\frac{\rho s}{s^2+s+5}\quad \rho范围未知，绘制参数全根轨迹\\
-特征方程求解：D(s)|_{s=j\omega}=s(s+\rho)+s+5=0
+{\color{grey}特征方程求解：D(s)|_{s=j\omega}=s(s+\rho)+s+5=0}
 $$
 
 ## 根轨迹分析系统动态性能
@@ -708,16 +725,16 @@ $$\left.\begin{array}{c}系统无振荡分量\\
 $$G(s)=\frac{K(s+z)}{(s+p_1)(s+p_2)}\quad (z位于p_1,p_2的一侧，p_1,p_2不一定实根)\\
 \ \\
 根轨迹在复平面上为以s=-z为圆心的圆$$
-$$证明：G(s)=\frac{K(s+3)}{s(s+2)}\quad
-s=\sigma+j\omega代入D(s)=0\\
-令实部、虚部均为0可得：
-\left\{\begin{array}{l}
+$${\color{grey}证明：G(s)=\frac{K(s+3)}{s(s+2)}\quad
+s=\sigma+j\omega代入D(s)=0}\\
+{\color{grey}令实部、虚部均为0可得：}
+{\color{grey}\left\{\begin{array}{l}
 \sigma^2+2\sigma+K(\sigma+3)-\omega^2=0\\
 2\sigma\omega+2\omega+K\omega=0
-\end{array}\right.\\
-整理得(\sigma+3)^2+\omega^2=(\sqrt{3})^2\qquad {\color{blue}（\sigma表示横坐标，\omega表示纵坐标）}$$
-$$几何考查解根：\xi=0.5;\quad
-\omega_d=1\ \text{rad/s}\quad\cdots$$
+\end{array}\right.}\\
+{\color{grey}整理得(\sigma+3)^2+\omega^2=(\sqrt{3})^2\qquad {\color{blue}（\sigma表示横坐标，\omega表示纵坐标）}}$$
+$${\color{grey}几何考查解根：\xi=0.5;\quad
+\omega_d=1\ \text{rad/s}\quad\cdots}$$
 
 ## 根轨迹解根典例
 
@@ -760,11 +777,13 @@ $$注：实轴上重合的根轨迹无法确定轨迹分支的走势（可借助
 ## 特殊根轨迹典例
 
 **先计算各根轨迹特征，再绘图**
+
 ![](pic-principal-of-automation-control\Markji_1751374535780.png)
 
 ## 根特征反得系统传递函数典例
 
-![](pic-principal-of-automation-control\Markji_1751374551103.png)
+<img src="pic-principal-of-automation-control\Markji_1751374551103.png" width="80%">
+
 $$(1)\quad G(s)=\frac{k}{s^v\cdot \Delta}\qquad
 \left\{\begin{array}{l}
 k\in(0,5)时，系统稳定\Rightarrow v\leqslant 1\\
@@ -809,12 +828,14 @@ $$注：\cos(\omega_0 t+\theta)与\sin(\omega_0 t+\theta)同理，直接代入�
 ## 频域基本概念
 
 **由开环频率特性分析负反馈闭环特性**
-$$正弦输入r(t)=\sin\omega t下，c_{ss}(t)=|G(j\omega)|\sin(\omega t+\angle{G(j\omega)}){\color{blue}（稳态输出）}\\
-频率特性（{\color{blue}以复数向量处理-关键}）：\\
-|G(j\omega)|\quad 模长相乘除，与象限无关\quad \sqrt{1+(\frac{\omega}{\omega_i})^2}\\
-\angle{G(j\omega)}\quad 相角相加减$$
-$$对数频率特性（任意象限）：\\
 
+$$正弦输入r(t)=\sin\omega t下，c_{ss}(t)=|G(j\omega)|\sin(\omega t+\angle{G(j\omega)}){\color{blue}（稳态输出）}\\
+频率特性（{\color{blue}以复数向量处理-关键}）：
+\left\{\begin{array}{l}
+|G(j\omega)|\quad 模长相乘除，与象限无关\quad \sqrt{1+(\frac{\omega}{\omega_i})^2}\\
+\angle{G(j\omega)}\quad 相角相加减
+\end{array}\right.$$
+$$对数频率特性（任意象限）：\\
 L(\omega)=20\lg|G|=20\lg\frac{K|j\frac{\omega}{\omega_1}+1||-j\frac{\omega}{\omega_2}-1|\cdots |j\frac{\omega}{\omega_m}+1|}{|-j\frac{\omega}{\tau_1}+1||j\frac{\omega}{\tau_2}-1|\cdots |j\frac{\omega}{\tau_n}+1|}（\text{Bode}折线图几何关系计算）(\frac{s}{\omega_1}+1)\rightarrow
 \left\{\begin{array}{}
 \frac{\omega_c}{\omega_1} & \omega_c>\omega_1\\
@@ -823,7 +844,7 @@ L(\omega)=20\lg|G|=20\lg\frac{K|j\frac{\omega}{\omega_1}+1||-j\frac{\omega}{\ome
 \ \\
 G(j\omega)对数幅频特性与象限无关，20\lg[\sqrt{1+(\frac{\omega}{\omega_i})^2}]
 $$
-$$相频特性：\\
+$$相频特性：
 \varphi(\omega)=\angle G(j\omega)=\arctan\frac{\omega}{\omega_1}+\arctan\frac{\omega}{\omega_2}+\cdots-90\degree\cdot v-\arctan\frac{\omega}{\omega_i}-\cdots\\
 \ \\
 \left\{\begin{array}{l}
@@ -875,12 +896,12 @@ $$N=N_+-N_- \\
 ## 幅值裕度与相角裕度
 
 $${\color{blue}分析1+G(j\omega)H(j\omega)对原点的“包围性”以判断负反馈闭环系统的稳定性}$$
-$$相角裕度\gamma=180\degree+\angle[G_1(j\omega_c)H(j\omega_c)]\qquad(|G_1(j\omega_c)H(j\omega_c)|=A(\omega_c)=1)\\
+$$相角裕度：\gamma=180\degree+\angle[G_1(j\omega_c)H(j\omega_c)]\qquad(|G_1(j\omega_c)H(j\omega_c)|=A(\omega_c)=1)\\
 注：以近似A(\omega_c)计算，即
 \text{Bode}图\omega_c处\\
 部分特殊题型以准确A(\omega)为准（灵活判断）
 $$
-$$幅值裕量K_g=\frac{1}{|G_1(j\omega_g)H(j\omega_g)|}=\frac{1}{A(\omega_g)}\qquad (\varphi(\omega_g)=-180\degree)\\
+$$幅值裕量：K_g=\frac{1}{|G_1(j\omega_g)H(j\omega_g)|}=\frac{1}{A(\omega_g)}\qquad (\varphi(\omega_g)=-180\degree)\\
 增益裕量GM=-20\lg|G_1(j\omega_g)H(j\omega_g)|=-20\lg A(\omega_g)\quad 越大越稳定（幅频特性L(\omega_g),A(\omega_g)越小越好）\\
 注：以近似A(\omega_g)计算
 $$
@@ -1019,11 +1040,12 @@ $$最小相位系统\text{Nyquist}图：G(s)=\frac{K(\frac{s}{\omega_1}+1)(\frac
 起始段\left\{\begin{array}{cl}
 K\angle 0\degree,& v=0\\
 虚线\ \infty\cdot \angle -90\degree v ,& v\neq 0
-\end{array}\right.\qquad 注：复根对应相角相消后，初始相角仍为0，轨迹仍始于正实轴\\
+\end{array}\right.\\
+注：复根对应相角相消后，初始相角仍为0，轨迹仍始于正实轴\\
 1.\ s平面中，s=j\omega(\omega=0\to +\infty)\\
 据向量关系定性分析|G(j\omega)|与\angle G(j\omega)变化趋势（仅一、二象限），所得绘制于[G]平面中\\
 2.\ 若需要绘制渐近线，整理G(j\omega)为实部、虚部求极限$$
-[传函子环节存在三、四象限情形](#传函子环节存在三、四象限情形)
+<!-- [传函子环节存在三、四象限情形](#传函子环节存在三、四象限情形) -->
 $$注：重点在0^+,+\infty时的图像，中间图像大致即可\\
 
 K仅对\text{Nyquist}曲线进行放大缩小，不改变曲线形状$$
@@ -1035,8 +1057,12 @@ G(j\omega)整理为实部、虚部\\
 G(j\omega)=\frac{-10\omega^2}{\omega^2(1+\omega^2)}+j\frac{5\omega}{\omega^2(1+\omega^2)}\\
 G(j0^+)=-10+j\infty，增补\infty\cdot \angle -90\degree\cdot v虚线，0^+\to \infty部分据向量关系分析趋势即可\\
 \omega=0\to -\infty部分由\omega=0\to +\infty部分关于实轴对称即可$$
-[传函子环节存在三、四象限情形](#传函子环节存在三、四象限情形)
-![](pic-principal-of-automation-control\Markji_1751374641018.png)
+<!-- [传函子环节存在三、四象限情形](#传函子环节存在三、四象限情形) -->
+
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751374641018.png width="40%">
+</div>
+
 $$注：非最小相角系统也可能始于正实轴\\
 \left\{\begin{array}{l}
 \omega= 0\to -\infty\\
@@ -1050,7 +1076,11 @@ G(j\omega)幅频相等，相角相反
 ## Nyquist曲线穿越虚轴点
 
 $$G(s)=\frac{10(s+1)}{(s+5)(s-1)}$$
-![](pic-principal-of-automation-control\Markji_1751374663887.png)
+
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751374663887.png width="30%">
+</div>
+
 $$图像有错误，应以\pm\angle90\degree 趋于0\\
 \ \\
 G(j\omega)=\frac{10(-5+3\omega^2)}{(\omega^2+25)(\omega^2+1)}+j\frac{-10(9\omega+\omega^3)}{(\omega^2+25)(\omega^2+1)}\\
@@ -1079,39 +1109,6 @@ G_0(s)=\frac{K}{s^v}\left\{\begin{array}{}
 \right.\\
  \ \\
 高频段（低、陡为佳）\qquad 决定系统抗高频干扰能力$$
-
-## Bode图折线原理
-
-**完整代表系统折线**
-$$G(s)=\frac{6}{s(\frac{s}{10}+1)[(\frac{s}{100})^2+\frac{s}{100}+1]}$$
-$$0<\omega<10：
-\left\{\begin{array}{rl}
-L(\omega)&=20\lg\frac{6}{\omega}\\
-&=\underline{20\lg6}-20\lg\omega\\
-\ \\
-&A(\omega)\approx\frac{6}{\omega}
-\end{array}\right.$$
-$$10<\omega<100：
-\left\{\begin{array}{rl}
-L(\omega)&=20\lg\frac{6}{\omega\cdot\frac{\omega}{10}}\\
-&=20\lg6-20\lg\omega-20\lg\frac{\omega}{10}\\
-&=\underline{20\lg6}-20\lg\omega-20\lg\omega+\underline{20\lg{10}}\\
-\ \\
-&A(\omega)\approx\frac{6}{\omega\cdot\frac{\omega}{10}}
-\end{array}\right.$$
-$$\omega>100：
-\left\{\begin{array}{rl}
-L(\omega)&=20\lg\frac{6}{\omega\cdot\frac{\omega}{10}\cdot(\frac{\omega}{100})^2}\\
-
-&=20\lg6-20\lg\omega-20\lg\frac{\omega}{10}-20\lg(\frac{\omega}{100})^2\\
-&=\underline{20\lg6}-20\lg\omega-20\lg\omega+\underline{20\lg{10}}-40\lg\omega+\underline{40\lg100}\\
-\ \\
-&A(\omega)\approx\frac{6}{\omega\cdot\frac{\omega}{10}\cdot(\frac{\omega}{100})^2}
-\end{array}\right.$$
-$$注：“元变化率”：-20\lg\omega\\
-分段折线过点(1,\sum “\_\_”)\\
-二阶振荡环节[(\frac{s}{\omega_n})^2+2\xi \frac{s}{\omega_n }+1]折线视作[(\frac{s}{\omega_n})^2+1]处理\\
-{\color{blue}A(\omega)表示幅频}$$
 
 ## Bode图绘制规范
 
@@ -1152,12 +1149,19 @@ $$注：L(\omega)已知情况下，最小相角系统确定$$
 $$含(s^2+1)环节的系统$$
 
 $$G(s)=\frac{k(s^2+1)}{s(s+5)}$$
-![](pic-principal-of-automation-control\Markji_1751374684480.png)
+
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751374684480.png width="40%">
+</div>
 
 ## Nyquist曲线反求传函
 
 $$单位负反馈系统\text{Nyquist}图如下，G(j\sqrt{2})=-j\sqrt{2}，求系统传函$$
-![](pic-principal-of-automation-control\Markji_1751374704881.png)
+
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751374704881.png>
+</div>
+
 $$G(s)=\frac{K}{as^2+bs+1}\quad
 \left\{\begin{array}{l}
 G(j0)=3\Rightarrow K=3\\
@@ -1167,7 +1171,10 @@ $$注：考研考查不会复杂$$
 
 ## Bode图反求传函典例
 
-![](pic-principal-of-automation-control\Markji_1751374719579.png)
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751374719579.png width="">
+</div>
+
 $$“两个坐标点，两个未知参数”\\
 G(s)=\frac{K}{s(\frac{s}{\omega_1}+1)}
 \left\{\begin{array}{l}
@@ -1201,7 +1208,11 @@ $$
 ## 对数稳定判据典例
 
 $$最小相位系统，判断稳定性$$
-![](pic-principal-of-automation-control\Markji_1751374740609.png)
+
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751374740609.png width="40%">
+</div>
+
 $$判断L(\omega)>0部分的穿越性\\
 N^-=1,N^+=1，故N=N^+-N^-=0\\
 Z=P-2N=0-0=0$$
@@ -1209,7 +1220,11 @@ Z=P-2N=0-0=0$$
 ## 含延迟环节的Nyquist曲线
 
 $$开环传函G(s)=\frac{Ke^{-2s}}{s}，求系统稳定时K的取值范围$$
-![](pic-principal-of-automation-control\Markji_1751374754900.png)
+
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751374754900.png width="35%">
+</div>
+
 $$含延迟环节的曲线均为无限收缩的螺线（曲线不甚准确）\\
 e^{-2j\omega}需延迟90\degree，换算为弧度制，2\omega应为\frac{90\degree}{57.3\degree}\\
 \varphi(\omega_g)=-90\degree-57.3\degree\times 2\omega_g=-180\degree\\
@@ -1220,13 +1235,12 @@ e^{-2j\omega}需延迟90\degree，换算为弧度制，2\omega应为\frac{90\deg
 ## 考情分析
 
 **基本考查三大校正，勿固化，灵活运用**
+
 **难度不高，但较为繁琐，能满足要求即可**
 
 ## 校正指标
 
-$$e_{ss}\\
-K_p,K_v,K_a\\
-\omega_c,\gamma
+$$e_{ss}\quad K_p,K_v,K_a\quad \omega_c,\gamma
 $$
 $$K_g考查要求不高$$
 $$\sigma\%,t_s
@@ -1330,16 +1344,20 @@ $$注：超前校正存在“耦合”问题，必须检验$$
 ## 校正方案选择
 
 $$根据系统特征与要求，依{\color{blue}直觉选择}合适校正方案；
+
 无需倾向，否则浪费时间$$
 
 ## 速度反馈或微分反馈校正
 
 $$K(\neq0),k_f任取均为典型二阶系统$$
-![](pic-principal-of-automation-control\Markji_1751374809326.png)
+
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751374809326.png width="60%">
+</div>
+
 $$
 “子闭环”反馈\beta s\\
 速度反馈(\beta s)校正后仍为典型二阶系统
-
 $$
 
 ## 非主要校正方法
@@ -1352,7 +1370,10 @@ $$反馈校正：整理为传函，具体情况具体分析（影响稳定性，
 
 ## K未知校正典例
 
-![](pic-principal-of-automation-control\Markji_1751374826774.png)
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751374826774.png width="90%">
+</div>
+
 $$思路一：校正中频段；\quad  根据K_v直接确定K，对G_0'(s)进行校正$$
 $${\color{grey}思路二：校正低频段；\quad确定\gamma满足要求的截止频率，解得K}$$
 $$注：K未知的校正题型
@@ -1372,13 +1393,18 @@ A(\omega_c)=\frac{12\cdot\frac{\omega_c}{\omega_2}\cdot\frac{\omega_c}{\omega_3}
 
 ## 反馈校正与希望特性结合典例
 
-![](pic-principal-of-automation-control\Markji_1751374862408.png)
-![](pic-principal-of-automation-control\Markji_1751374868397.png)
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751374862408.png width="80%">
+<img src=pic-principal-of-automation-control\Markji_1751374868397.png width="80%">
+</div>
 
 ## 串联校正典例
 
 **希望特性的思想**
-![](pic-principal-of-automation-control\Markji_1751374947886.png)
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751374947886.png width="85%">
+</div>
+
 $$G(s)=\frac{31.6}{s(\frac{s}{31.6}+1)}\\
 \textcircled{2}\quad e_{ss}\leqslant1，故系统v\geqslant2，设计G_c(s)=\frac{s+1}{s}\qquad (s+1)“妙”\quad“轴点”(1,20\lg K)$$
 
@@ -1387,6 +1413,7 @@ $$G(s)=\frac{31.6}{s(\frac{s}{31.6}+1)}\\
 ## 考情分析
 
 模拟化校正不考，动态性能不考，动态误差系数法不考
+
 **离散域的分析方法很匮乏**
 
 ## 离散域“延迟因子”标准型
@@ -1493,16 +1520,17 @@ $$k_p, \ k_v, \ k_a \\
 e_p(\infty), \ e_v(\infty), \ e_a(\infty)$$
 
 **稳态误差计算前提：先判断稳定性**
+
 **直接用“静态误差系数”计算稳态误差即可**
 $$通法：e_{ss}=\lim\limits_{z\to 1}(z-1)E(z)=\lim\limits_{z\to 1}(z-1)\cdot R(z)\cdot\Phi_e(z)\\
 \ \\
 \begin{array}{lll}
 静态误差系数：&稳态误差：\\
-k_p=\lim\limits_{z\to1}GH(z)& e_p(\infty)=\frac{A}{1+k_p}&\frac{A}{1+\lim\limits_{z\to1}GH(z)}\\
+k_p=\lim\limits_{z\to1}G(z)& e_p(\infty)=\frac{A}{1+k_p}&\frac{A}{1+\lim\limits_{z\to1}G(z)}\\
 
-k_v=\lim\limits_{z\to1}(z-1)GH(z)&e_v(\infty)=\frac{AT}{k_v}&\frac{AT}{\lim\limits_{z\to1}(z-1)GH(z)}\\
+k_v=\lim\limits_{z\to1}(z-1)G(z)&e_v(\infty)=\frac{AT}{k_v}&\frac{AT}{\lim\limits_{z\to1}(z-1)G(z)}\\
 
-k_v=\lim\limits_{z\to1}(z-1)^2GH(z)&e_a(\infty)=\frac{AT^2}{k_a}&\frac{AT^2}{\lim\limits_{z\to1}(z-1)^2GH(z)}
+k_v=\lim\limits_{z\to1}(z-1)^2G(z)&e_a(\infty)=\frac{AT^2}{k_a}&\frac{AT^2}{\lim\limits_{z\to1}(z-1)^2G(z)}
 \end{array}$$
 $$注：离散稳态误差用静态误差系数法一般不失效$$
 
@@ -1543,10 +1571,17 @@ $$注：考研范围内，此法均适用，
 但事实上存在失效情况\\
 脉冲传递函数可能无法求，输入与内部之间无“开关”，或内部耦合无法相消
 $$
-![](pic-principal-of-automation-control\Markji_1751375002452.png)
+
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751375002452.png width="">
+</div>
+
 $$列写C(s)表达式，按照“直连”原则改写即可\\
 前馈与中间环节捆绑，导致脉冲传递函数不存在$$
-![](pic-principal-of-automation-control\Markji_1751375019609.png)
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751375019609.png width="50%">
+</div>
+
 $$脉冲传递函数典例：内部耦合无法相消，即失效情形$$
 
 ## 极点在z平面分布与瞬态响应的关系
@@ -1614,7 +1649,10 @@ c(t)=0.368\delta(t-T)+\delta(t-2T)+1.4\delta(t-3T)+\cdots$$
 
 ## 已知稳态误差反解参数范围
 
-![](pic-principal-of-automation-control\Markji_1751375072618.png)
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751375072618.png width="80%">
+</div>
+
 $$G(z)=Z[\frac{1-e^{-Ts}}{s}\times\frac{Ke^{-Ts}}{s}]=\frac{KT}{z(z-1)}\\
 
 \left\{\begin{array}{ll}
@@ -1756,7 +1794,6 @@ $$定义：非线性环节在正弦输入f(t)=A\sin\omega t下的基波y(t)=Y\si
 N(A)为一复变函数\\
 |N(A)|=\frac{Y}{A},\,\quad \angle N(A)=\phi
 \end{array}\right.$$
-[描述函数的计算](#高阶系统超调量与调节时间的经验公式)
 $$性质：
 \left\{\begin{array}{}N(A)=N_1(A)+N_2(A)\\
 N(A)\neq N_1(A)\times N_2(A)
@@ -1834,7 +1871,10 @@ $$
 
 ## 等效线性部分传函
 
-![](pic-principal-of-automation-control\Markji_1751375184962.png)
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751375184962.png width="80%">
+</div>
+
 $$传递函数通法求等效传递函数结果不唯一\\
 \Phi(s)=\frac{G_1}{1+G_1+G_1H_1N(A)}
 \left\{\begin{array}{ll}
@@ -1851,12 +1891,19 @@ $$-\frac{1}{N(A)}在实轴上（只考此情形）：\\
 
 ## 非线性控制框图处理典例1
 
-![](pic-principal-of-automation-control\Markji_1751375203973.png)![](pic-principal-of-automation-control\Markji_1751375210695.png)
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751375203973.png width="80%">
+<img src=pic-principal-of-automation-control\Markji_1751375210695.png width="80%">
+</div>
+
 $$注：框图处理的“决断点”在b处，可上升为一般特点，灵活分析$$
 
 ## 非线性控制框图处理典例2
 
-![](pic-principal-of-automation-control\Markji_1751375234726.png)
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751375234726.png width="85%">
+</div>
+
 $$0.5\ddot{c}+\dot{c}=u=
 \left\{\begin{array}{}
 8e_1,&|e_1|<0.5\\
@@ -1883,8 +1930,11 @@ c=-e
 
 ## 描述函数法信号关系典例
 
-![](pic-principal-of-automation-control\Markji_1751375276446.png)
-![](pic-principal-of-automation-control\Markji_1751375282452.png)
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751375276446.png width="70%">
+<img src=pic-principal-of-automation-control\Markji_1751375282452.png width="50%">
+</div>
+
 $$等效处理，线性部分G(s)=\frac{10ke^{-\tau s}}{s(s+2)^2}$$
 $$(1)\quad G(s)=\frac{10k}{s(s+2)^2}\Rightarrow G(j\omega)=\frac{10k}{-4\omega^2+j(4\omega-\omega^3)}\\
 令\text{Im}[G(j\omega)]=0，得\omega=2，此时G(j\omega)=-\frac{5k}{8}\\
@@ -1910,7 +1960,9 @@ $$注：c(t)振幅仅在暗示A的大小，
 
 $$系统满足方程\ddot{x}+\dot{x}+x-\frac{1}{2}x^3=0$$
 
-![](pic-principal-of-automation-control\Markji_1751375306088.png)
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751375306088.png>
+</div>
 
 $$\ddot{x}+\dot{x}+x=-\frac{1}{2}(-x)^3=y\\
 \ \\
@@ -1925,8 +1977,11 @@ G(s)=\frac{X(s)}{Y(s)}=\frac{1}{s^2+s+1}
 
 ## 微分方程的描述函数分析典例2
 
-![](pic-principal-of-automation-control\Markji_1751375324435.png)
-<img src=pic-principal-of-automation-control\Markji_1751375333501.png width="50%"><img src=pic-principal-of-automation-control\Markji_1751375338988.png width="48%">
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751375324435.png width="85%">
+<img src=pic-principal-of-automation-control\Markji_1751375333501.png width="50%">
+<img src=pic-principal-of-automation-control\Markji_1751375338988.png width="48%">
+</div>
 
 # 横向知识点对比
 
@@ -1952,11 +2007,17 @@ $$
 
 # 备用知识点
 
+## 动态性能指标计算器方法
+
+$$使用\textbf{{\color{red}=}}列方程，利用\text{solve}方法解一元方程$$
+
 ## 典型环节传递函数
 
 **典型问题：已知模型，构造系统**
 $$G(s)=-\frac{R_2}{R_1}\qquad G(s)=-\frac{1}{R_1C_1s}\qquad G(s)=-\frac{R_2}{R_1(R_2C_2s+1)}$$
-<img src=pic-principal-of-automation-control\Markji_1751375386725.png width="32%"><img src=pic-principal-of-automation-control\Markji_1751375392653.png width="35%"><img src=pic-principal-of-automation-control\Markji_1751375398308.png width="32%">
+<img src=pic-principal-of-automation-control\Markji_1751375386725.png width="32%">
+<img src=pic-principal-of-automation-control\Markji_1751375392653.png width="35%">
+<img src=pic-principal-of-automation-control\Markji_1751375398308.png width="32%">
 
 ## Nyquist稳定判据证明
 
@@ -1980,6 +2041,39 @@ $$\omega:-\infty\to +\infty
 \ \\
 \Delta\angle F(s)=(n-2z)\pi-(n-2p)\pi=(p-z)2\pi
 \end{array}\right.故Z=P-N_2（N_2表示包围圈数，逆正顺负）$$
+
+## Bode图折线原理
+
+**完整代表系统折线**
+$$G(s)=\frac{6}{s(\frac{s}{10}+1)[(\frac{s}{100})^2+\frac{s}{100}+1]}$$
+$$0<\omega<10：
+\left\{\begin{array}{rl}
+L(\omega)&=20\lg\frac{6}{\omega}\\
+&=\underline{20\lg6}-20\lg\omega\\
+\ \\
+&A(\omega)\approx\frac{6}{\omega}
+\end{array}\right.$$
+$$10<\omega<100：
+\left\{\begin{array}{rl}
+L(\omega)&=20\lg\frac{6}{\omega\cdot\frac{\omega}{10}}\\
+&=20\lg6-20\lg\omega-20\lg\frac{\omega}{10}\\
+&=\underline{20\lg6}-20\lg\omega-20\lg\omega+\underline{20\lg{10}}\\
+\ \\
+&A(\omega)\approx\frac{6}{\omega\cdot\frac{\omega}{10}}
+\end{array}\right.$$
+$$\omega>100：
+\left\{\begin{array}{rl}
+L(\omega)&=20\lg\frac{6}{\omega\cdot\frac{\omega}{10}\cdot(\frac{\omega}{100})^2}\\
+
+&=20\lg6-20\lg\omega-20\lg\frac{\omega}{10}-20\lg(\frac{\omega}{100})^2\\
+&=\underline{20\lg6}-20\lg\omega-20\lg\omega+\underline{20\lg{10}}-40\lg\omega+\underline{40\lg100}\\
+\ \\
+&A(\omega)\approx\frac{6}{\omega\cdot\frac{\omega}{10}\cdot(\frac{\omega}{100})^2}
+\end{array}\right.$$
+$$注：“元变化率”：-20\lg\omega\\
+分段折线过点(1,\sum “\_\_”)\\
+二阶振荡环节[(\frac{s}{\omega_n})^2+2\xi \frac{s}{\omega_n }+1]折线视作[(\frac{s}{\omega_n})^2+1]处理\\
+{\color{blue}A(\omega)表示幅频}$$
 
 ## 截止频率范围确定补充
 

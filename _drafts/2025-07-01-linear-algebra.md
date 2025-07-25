@@ -77,18 +77,29 @@ $$\bigg| \quad\quad\bigg|=(-1)^\frac{n(n-1)}{2}\prod_{i=1}^n\Delta$$
 ## 爪型行列式
 
 $$第一列减j列的\frac{a_{i1}}{a_{ij}}即可化为上三角矩阵$$
-![](pic-linear-algebra\Markji_1751359347607.png)
+
+<div style="text-align: center;">
+<img src=pic-linear-algebra\Markji_1751359347607.png width="25%">
+</div>
 
 ## 异爪型行列式
 
 **递推法，按“尾部”行（列）展开**
-![](pic-linear-algebra\Markji_1751359383717.png)
+
+<div style="text-align: center;">
+<img src=pic-linear-algebra\Markji_1751359383717.png width="40%">
+</div>
+
 $$选取“两爪”(a_n,\quad x)较简单$$
 
 ## 三对角行列式
 
 **递推法，按第一行或第一列展开，整理可得两两递推式**
-![](pic-linear-algebra\Markji_1751359436900.png)
+
+<div style="text-align: center;">
+<img src=pic-linear-algebra\Markji_1751359436900.png width="40%">
+</div>
+
 $$\quad\ D_{n}=2aD_{n-1}-a^2D_{n-2}\\
 \Rightarrow D_n-aD_{n-1}=a(D_{n-1}-aD_{n-2})\\
 \Rightarrow D_n-aD_{n-1}=a^n\\
@@ -97,29 +108,44 @@ $$\quad\ D_{n}=2aD_{n-1}-a^2D_{n-2}\\
 ## 加边法
 
 **针对除主对角元素外，各行（列）均有相同的元素**
-![](pic-linear-algebra\Markji_1751359460950.png)
+
+<div style="text-align: center;">
+<img src=pic-linear-algebra\Markji_1751359460950.png width="50%">
+</div>
+
 $$行元素相同加行，列元素相同加列$$
 
 ## 拆项法
 
-![](pic-linear-algebra\Markji_1751359548244.png)
-![](pic-linear-algebra\Markji_1751359563809.png)
-![](pic-linear-algebra\Markji_1751359575364.png)
-![](pic-linear-algebra\Markji_1751359593126.png)
+<div style="text-align: center;">
+<img src=pic-linear-algebra\Markji_1751359548244.png width="80%">
+<img src=pic-linear-algebra\Markji_1751359563809.png width="85%">
+<img src=pic-linear-algebra\Markji_1751359575364.png width="75%">
+<img src=pic-linear-algebra\Markji_1751359593126.png width="80%">
+</div>
 
 ## 二维“品”字型行列式
 
-![](pic-linear-algebra\Markji_1751359922327.png)
+<div style="text-align: center;">
+<img src=pic-linear-algebra\Markji_1751359922327.png width="30%">
+</div>
 
 ## n维“品”字型行列式
 
-![](pic-linear-algebra\Markji_1751359941213.png)![](pic-linear-algebra\Markji_1751359959730.png)
+<div style="text-align: center;">
+<img src=pic-linear-algebra\Markji_1751359941213.png width="30%">
+<img src=pic-linear-algebra\Markji_1751359959730.png width="80%">
+</div>
 
 ## 拉普拉斯展开定理
 
 $$行列式可按任意k(1\leqslant k\leqslant n-1)行（列）展开，\\即在n阶行列式|A|中，可以任意选定k行（列），\\则含于此k行（列）中的所有k阶子式与其代数余子式乘积之和为|A|的值\\
 （代数余子式下标为子式下标）$$
-![](pic-linear-algebra\Markji_1751359996872.png)
+
+<div style="text-align: center;">
+<img src=pic-linear-algebra\Markji_1751359996872.png width="80%">
+</div>
+
 $$拉普拉斯行、列展开：\\
 |A|=\sum_{j=1}^{n}a_{1j}A_{1j}=a_{11}A_{11}+a_{12}A_{12}+\cdots+a_{1n}A_{1n}\\
 A_{ij}=(-1)^{i+j}M_{ij}$$
@@ -1404,11 +1430,13 @@ $$
 
 ## 秩为1的矩阵求特征向量
 
-![](pic-linear-algebra\Markji_1751360044319.png)
-![](pic-linear-algebra\Markji_1751360051395.png)
-![](pic-linear-algebra\Markji_1751360060112.png)
-![](pic-linear-algebra\Markji_1751360067205.png)
-![](pic-linear-algebra\Markji_1751360073729.png)
+<div style="text-align: center;">
+<img src=pic-linear-algebra\Markji_1751360044319.png>
+<img src=pic-linear-algebra\Markji_1751360051395.png width="80%">
+<img src=pic-linear-algebra\Markji_1751360060112.png width="80%">
+<img src=pic-linear-algebra\Markji_1751360067205.png width="70%">
+<img src=pic-linear-algebra\Markji_1751360073729.png width="90%">
+</div>
 
 # 二次型
 

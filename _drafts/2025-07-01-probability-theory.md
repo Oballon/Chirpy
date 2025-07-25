@@ -355,7 +355,11 @@ $$1.X\sim N(\mu,\sigma^2)\Rightarrow aX+b\sim N(a\mu+b,a^2\sigma^2)\\
 \not\xRightarrow {X,Y不相互独立}aX+bY\sim N
 \end{array}\right.\\
 3.标准化：X\sim N(\mu,\sigma^2),则\frac{X-\mu}{\sigma}\sim N(0,1)$$
-![](pic-probability-theory\Markji_1751362016607.png)
+
+<div style="text-align: center;">
+<img src=pic-probability-theory\Markji_1751362016607.png width="50%">
+</div>
+
 $$\mu为对称轴位置，\frac{1}{\sqrt{2\pi}\sigma}为图像高度$$
 
 ## 一维随机变量重要经验
