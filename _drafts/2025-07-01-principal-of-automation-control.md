@@ -277,7 +277,7 @@ $$注：脉冲响应c(t)=\frac{1}{T}e^{-\frac{1}{T}t}$$
 
 ## 典型二阶系统
 
-$$主前向通路分子为系数\omega_n^2,a\omega_n^2；且闭环系统为单位负反馈系统\\
+$$开环满足G(s)=\frac{b}{s(s+a)},且闭环系统为单位负反馈系统，则有\\
 G(s)=\frac{\omega_n^2}{s(s+2\xi\omega_n)}\qquad
 \Phi(s)=\frac{\omega_n^2}{s^2+2\xi\omega_ns+\omega_n^2}\\
 \ \\
@@ -314,6 +314,9 @@ $$\begin{array}{ll}
 针对同一系统，输入满足导数关系，输出间同样满足导数关系$$
 
 ## 动态性能指标
+
+**含零点的动态性能公式不考**
+
 $$t_p, \ \sigma\%,\  t_s,\ t_r$$
 
 $$二阶欠阻尼系统极点：-\xi\omega_n\pm j\sqrt{1-\xi^2}\ \omega_n\quad (0<\xi<1)\\
@@ -380,6 +383,7 @@ s^0 & \cdots
 2.特征方程纯虚根个数b=辅助方程纯虚根个数\\
 3.稳定极点个数=方程阶数-a-b$$
 $$注：{\color{blue}劳斯判别法姑且用即可，勿深究各类情况}\\
+实根也可能在辅助方程中解得\\
 局限性：无法判断含延迟环节e^{-\tau s}的系统稳定性\\
 \ \\
 特殊情况：\\
@@ -389,8 +393,11 @@ $$注：{\color{blue}劳斯判别法姑且用即可，勿深究各类情况}\\
 
 ## 稳态误差定义
 
+**哈工大默认输出端**
+
 $$单位反馈H(s)=1，E(s)=R(s)-C(s)\\
 非单位反馈H(s)\neq1，E(s)=\frac{1}{H(s)}R(s)-C(s)\quad （梅森公式不可用）$$
+$$注：单位负反馈时，E(s)=-C_n(s)即为扰动产生的误差$$
 
 ## 静态误差系数及稳态误差（单位反馈）
 
@@ -398,7 +405,7 @@ $$单位反馈H(s)=1，E(s)=R(s)-C(s)\\
 
 **静态误差系数法前提：无输入前馈**
 $$G(s)=\frac{K}{s^v}\frac{(\tau_1s+1)\cdots(\tau_m+1)}{(T_1s+1)\cdots(T_ns+1)}\\
-\left\{\begin{array}{l}K为开环放大倍数\\ v为系统型别，即无静差度
+\left\{\begin{array}{l}K为开环放大倍数\\ v为系统型别，即无静差度（定义不严格，根据可跟踪的信号即可判断型别）
 \end{array}\right.$$
 
 **直接用“静态误差系数”计算稳态误差即可**
@@ -545,6 +552,8 @@ $$根轨迹校正不考\\
 
 ## 复域首“1”标准型
 
+**必须首先化为标准型**
+
 $$G(s)=\frac{K^*(s-2)(s+3)}{(s+2)(s-1)(s+4)}（便于获取零极点）\\
 \ \\
 根轨迹增益K^*：首“1”标准型下的比例系数$$
@@ -644,6 +653,8 @@ $$注：
 G(s)与G^*(s)仅仅根轨迹相同，其他分析仍须使用G(s)$$
 
 ## 全根轨迹
+
+**无特殊说明，根轨迹只绘制K：0->+$\infty$**
 
 $$提法：参数-\infty<k<+\infty的全根轨迹，或相角180\degree,0\degree的全根轨迹$$
 $$典例（参数范围未知）：G(s)=\frac{s+5}{s(s+\rho)}\quad 找出闭环系统临界阻尼时的\rho\\
@@ -761,7 +772,7 @@ $$
 
 ## 根轨迹典例1
 
-$$G(s)=\frac{k(s+2)}{s^2(s+a)}$$
+$$\star\star\ G(s)=\frac{k(s+2)}{s^2(s+a)}$$
 <img src=pic-principal-of-automation-control\Markji_1751374419364.png width="37%"><img src=pic-principal-of-automation-control\Markji_1751374426561.png width="40%"><img src=pic-principal-of-automation-control\Markji_1751374433631.png width="23%">
 $$注：零点对根轨迹有一定的“吸引”$$
 
@@ -778,7 +789,8 @@ $$注：实轴上重合的根轨迹无法确定轨迹分支的走势（可借助
 
 **先计算各根轨迹特征，再绘图**
 
-![](pic-principal-of-automation-control\Markji_1751374535780.png)
+
+<img src=pic-principal-of-automation-control\Markji_1751374535780.png width="35%">
 
 ## 根特征反得系统传递函数典例
 
@@ -1514,7 +1526,7 @@ D(-1)=1-a_1+a_0>0
 $$注：离散稳定性与连续稳定性无必然联系\\
 $$
 
-## 离散域静态误差系数及稳态误差
+## 离散域静态误差系数及稳态误差（单位反馈）
 
 $$k_p, \ k_v, \ k_a \\
 e_p(\infty), \ e_v(\infty), \ e_a(\infty)$$
@@ -1522,6 +1534,7 @@ e_p(\infty), \ e_v(\infty), \ e_a(\infty)$$
 **稳态误差计算前提：先判断稳定性**
 
 **直接用“静态误差系数”计算稳态误差即可**
+
 $$通法：e_{ss}=\lim\limits_{z\to 1}(z-1)E(z)=\lim\limits_{z\to 1}(z-1)\cdot R(z)\cdot\Phi_e(z)\\
 \ \\
 \begin{array}{lll}
@@ -1537,6 +1550,7 @@ $$注：离散稳态误差用静态误差系数法一般不失效$$
 ## 离散域稳态误差
 
 **稳态误差计算前提：先判断稳定性**
+
 **用梅森增益公式求传函，“直连项”整体Z变换**
 $$e_{ss}=e(\infty)=\lim\limits_{z\to 1}(z-1)E(z)=\lim\limits_{z\to 1}(z-1)\cdot \Phi_e(z)\cdot R(z)\\
 
@@ -1573,7 +1587,7 @@ $$注：考研范围内，此法均适用，
 $$
 
 <div style="text-align: center;">
-<img src=pic-principal-of-automation-control\Markji_1751375002452.png width="">
+<img src=pic-principal-of-automation-control\Markji_1751375002452.png width="50%">
 </div>
 
 $$列写C(s)表达式，按照“直连”原则改写即可\\
@@ -1587,7 +1601,11 @@ $$脉冲传递函数典例：内部耦合无法相消，即失效情形$$
 ## 极点在z平面分布与瞬态响应的关系
 
 $$重根情形较复杂，{\color{blue}定性理解即可}，考研不涉及计算$$
-![](pic-principal-of-automation-control\Markji_1751375046666.png)
+
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751375046666.png width="80%">
+</div>
+
 $$\left\{\begin{array}{l}
 0<z<1的实根，衰减无振荡\\
 -1<z<0的实根，衰减振荡\\
@@ -1795,7 +1813,7 @@ N(A)为一复变函数\\
 |N(A)|=\frac{Y}{A},\,\quad \angle N(A)=\phi
 \end{array}\right.$$
 $$性质：
-\left\{\begin{array}{}N(A)=N_1(A)+N_2(A)\\
+\left\{\begin{array}{l}N(A)=N_1(A)+N_2(A)\qquad （叠加性质）\\
 N(A)\neq N_1(A)\times N_2(A)
 \end{array}\right.\\
 当非线性特性为单值奇函数时，A_1=0，即N(A)为实数\\
@@ -1829,7 +1847,11 @@ $$
 ## 典型非线性特性及负倒描述函数
 
 **考试不一定提供描述函数，单值描述函数及表达式均须记忆**
-![](pic-principal-of-automation-control\Markji_1751375154647.png)
+
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751375154647.png width="70%">
+</div>
+
 $$死区特性：N(A)=\frac{2k}{\pi}\left[\frac{\pi}{2}-\arcsin(\frac{a}{A})-\frac{a}{A}\sqrt{1-(\frac{a}{A}^2)}\right]\\
 立方函数(y=x^3)：N(A)=\frac{3}{4}A^2\\
 一般非线性(y=\frac{1}{2}x+\frac{1}{4}x^3)：N(A)=\frac{1}{2}+\frac{3}{16}A^2$$
@@ -1872,7 +1894,7 @@ $$
 ## 等效线性部分传函
 
 <div style="text-align: center;">
-<img src=pic-principal-of-automation-control\Markji_1751375184962.png width="80%">
+<img src=pic-principal-of-automation-control\Markji_1751375184962.png width="70%">
 </div>
 
 $$传递函数通法求等效传递函数结果不唯一\\
@@ -1926,13 +1948,16 @@ c=-e
 ## 相轨迹分析系统性能指标
 
 **所见即所得**
-![](pic-principal-of-automation-control\Markji_1751375259028.png)
+
+<div style="text-align: center;">
+<img src=pic-principal-of-automation-control\Markji_1751375259028.png width="60%">
+</div>
 
 ## 描述函数法信号关系典例
 
 <div style="text-align: center;">
 <img src=pic-principal-of-automation-control\Markji_1751375276446.png width="70%">
-<img src=pic-principal-of-automation-control\Markji_1751375282452.png width="50%">
+<img src=pic-principal-of-automation-control\Markji_1751375282452.png width="45%">
 </div>
 
 $$等效处理，线性部分G(s)=\frac{10ke^{-\tau s}}{s(s+2)^2}$$
@@ -1979,8 +2004,8 @@ G(s)=\frac{X(s)}{Y(s)}=\frac{1}{s^2+s+1}
 
 <div style="text-align: center;">
 <img src=pic-principal-of-automation-control\Markji_1751375324435.png width="85%">
-<img src=pic-principal-of-automation-control\Markji_1751375333501.png width="50%">
-<img src=pic-principal-of-automation-control\Markji_1751375338988.png width="48%">
+<img src=pic-principal-of-automation-control\Markji_1751375333501.png width="45%">
+<img src=pic-principal-of-automation-control\Markji_1751375338988.png width="45%">
 </div>
 
 # 横向知识点对比

@@ -566,7 +566,7 @@ $$非零因子常数化：\\
 加减慎用（相消项决定）；若无加减，乘除直接用、复合函数（复合函数各层均无穷小的前提下，由外向内替换）
 
 **所给函数均连续**
-$$等价无穷小替换：\\
+$$等价无穷小替换（仅适用于积分下限为0）：\\
 
 x\to0 时，f(x)\sim ax^m, a\neq 0,m\in Z^+, 则\int_0^xf(t)dt\sim \int_0^x at^m dt=\frac{a}{m+1}x^{m+1}\\
 x\to0 时，f(x)\sim ax^m, g(x)\sim bx^n, ab\neq 0,m,n\in Z^+, 则\int_0^{g(x)}f(t)dt\sim \int_0^{bx^n} at^m dt=\frac{a}{m+1}(bx^n)^{m+1}$$
@@ -2841,7 +2841,6 @@ $$压力微元：\rho gxdS（x为水深）\\
 抽水做功微元：\rho gxdV（x为提升高度）$$
 $$注：旋转体灵活转换坐标系简化计算\\
 灵活运用物理意义（x 深度、高度等）
-
 $$
 
 # 多元微分
@@ -2863,7 +2862,6 @@ f(x,y)均趋向于A，则\lim\limits_{(x,y)\to (0,0)}f(x,y)=A$$
 $$多元初等函数在其自然定义域上是连续的$$
 
 ## 二元极值定义
-极大值，极小值
 
 $$f(x,y)在U(x_0,y_0)内有定义，对于任意(x,y)\in \mathring{U}(x_0,y_0),\ \ \ f(x,y)<f(x_0,y_0)(或f(x,y)>f(x_0,y_0))，则\\称f(x_0,y_0)为极值
 $$
@@ -3067,7 +3065,7 @@ $$
 $$隐函数求导法则（适用于一阶）$$
 
 **链式求导法则：**
-$$链式变量关系，一对多，偏导相加，逐级向后$$
+$$列链式变量关系，一对多时偏导相加，逐级向后$$
 
 $$注：若二阶混合偏导连续，注意合并二阶混合偏导$$
 
@@ -3236,7 +3234,7 @@ $$......（注意代回）$$
 $$P(x,y)dx+Q(x,y)dy=0$$
 
 $$当\frac{\partial Q}{\partial x}=\frac{\partial P}{\partial y}时，P(x,y)dx+Q(x,y)dy=0称为全微分方程\\
-即du=P(x,y)dx+Q(x,y)dy=0（可知u(x,y)=C）$$
+即存在du=P(x,y)dx+Q(x,y)dy=0（可知u(x,y)=C）$$
 **解微分方程问题=由偏导反求原函数问题**
 $$(y-x^2)dx+(x-1)dy=0$$
 **公式法（易混）：**
@@ -3454,7 +3452,9 @@ $$注：
 **数项级数考查敛散性**
 1. 正（负）项级数审敛几大方法：
 比较审敛法（一般用于证明）、比较审敛法的极限形式、比值审敛法、根值审敛法、积分审敛法
+
 2. 数列的敛散性容易分析，数项级数的敛散性较复杂
+
 3. 重难点：数项级数的证明题
 
 ## 数列收敛与子列的关系
@@ -3529,7 +3529,7 @@ $$\sum_{n=1}^{\infty}u_n收敛\Rightarrow \sum_{n=1}^{\infty}(\alpha u_n+ \beta 
 
 ## 数项级数敛散性常用结论4
 
-$$\sum_{n=1}^{\infty}u_n收敛，\sum_{n=1}^{\infty}|v_n|收敛\Rightarrow\sum_{n=1}^{\infty}|u_n v_n|收敛，\sum_{n=1}^{\infty}u_n\cdot|v_n|收敛\quad（\lim\limits_{n\to \infty}|v_n|,加快了|u_n|,u_n\to 0的速度）\\
+$$\sum_{n=1}^{\infty}u_n收敛，\sum_{n=1}^{\infty}|v_n|收敛\Rightarrow\sum_{n=1}^{\infty}|u_n v_n|收敛，\sum_{n=1}^{\infty}u_n\cdot|v_n|收敛\quad（u_n,|u_n|,加快了|v_n|\to 0的速度）\\
 \ \\
 \sum_{n=1}^{\infty}u_n与\sum_{n=1}^{\infty}v_n至少有一个发散\Rightarrow\sum_{n=1}^{\infty}(|u_n|+|v_n|)发散\quad （均为正项级数，无法正负相消）\\
 \ \\
@@ -3651,7 +3651,7 @@ $$注：
 ## 幂级数线性叠加的收敛半径
 
 $$\sum_{n=0}^{\infty}a_n x^n与\sum_{n=0}^{\infty}b_n x^n的收敛半径分别为R_1,R_2(R_1\neq R_2)\\
-\sum_{n=0}^{\infty}\alpha a_n \pm \beta b_n x^n的收敛半径为\min\{R_1,R_2\}$$
+\sum_{n=0}^{\infty}(\alpha a_n \pm \beta b_n) x^n的收敛半径为\min\{R_1,R_2\}$$
 $$注：\\
 若R_1\neq R_2
 \left\{
@@ -3726,7 +3726,7 @@ f(x),&x为连续点\\
 $$f(x)\sim\frac{a_0}{2}+\sum^\infty_{n=1}(a_n\cos\frac{n\pi x}{l}+b_n\sin\frac{n\pi}{l}x)\\
 
 \left.\begin{array}{l}
-a_0=\frac{1}{l}\int_{-l}^lf(x)dx= a_n|_{n=0}\\
+a_0=\frac{1}{l}\int_{-l}^lf(x)dx \neq a_n|_{n=0}（不一定相等）\\
 \ \\
 a_n=\frac{1}{l}\int_{-l}^lf(x)\cos\frac{n\pi x}{l}dx,n=1,2,\cdots\\
 \ \\
@@ -3735,8 +3735,8 @@ b_n=\frac{1}{l}\int_{-l}^lf(x)\sin\frac{n\pi x}{l}dx,n=1,2,\cdots
 $$f(x)偶函数\rightarrow余弦级数，f(x)=\frac{a_0}{2}+\sum_{n=1}^{\infty}a_n\cos \frac{n\pi x}{l}\\
 f(x)奇函数\rightarrow正弦级数，f(x)=\sum_{n=1}^{\infty}b_n\sin \frac{n\pi x}{l}$$
 $$注：2l须为f(x)的最小正周期；
-否则，会丢失部分谐波\\
-借"m"求"n"次的系数，\int_{-\mu}^{\mu}\cos\frac{m\pi x}{\mu}\cos\frac{n\pi x}{l}dx(\mu=kl,k>1)$$
+否则，会丢失部分谐波$$
+$${\color{grey}借"m"求"n"次的系数，\int_{-\mu}^{\mu}\cos\frac{m\pi x}{\mu}\cos\frac{n\pi x}{l}dx(\mu=kl,k>1)}$$
 
 ## 傅里叶级数奇延拓，偶延拓
 
@@ -3759,7 +3759,7 @@ $$
 ## 傅里叶级数小结论
 
 $$\int_{-l}^l\cos\frac{n\pi x}{l}dx=\int_{-l}^l\sin\frac{n\pi x}{l}dx=0$$
-$$\int_{0}^l\sin\frac{n\pi x}{l}dx=\frac{-1}{n\pi}(\cos n\pi-1)=\frac{-1}{n\pi}((-1)^n-1)\\
+$$\int_{0}^l\sin\frac{n\pi x}{l}dx=\frac{-l}{n\pi}(\cos n\pi-1)=\frac{-l}{n\pi}((-1)^n-1)\\
 \int_{0}^l\cos\frac{n\pi x}{l}dx=0
 $$
 
@@ -3804,6 +3804,7 @@ $$配\frac{1}{x^k}时，注意讨论\left\{\substack{x=0\\x\neq0}\right.$$
 ## 求和函数技巧
 
 **展开式侧凑**
+
 **前提，先求收敛域**
 $$形式处理：裂项、拆分、凑已知展开式等\quad{\color{blue}关键：配凑单次因式（仅单次因式可被“积”“导”处理）}\\
 例：\sum_{n=0}^{\infty}\frac{4n^2+4n+3}{2n+1}x^{2n},\quad\sum_{n=0}^{\infty}(-1)^{n-1}[1+\frac{1}{n(2n-1)}]x^{2n},\quad \sum_{n=0}^{\infty}\frac{1+n^2}{n!\cdot2^n}x^n,\quad \sum_{n=0}^{\infty}(-1)^n\frac{n+1}{(2n+1)!}x^{2n+1}$$
@@ -3825,6 +3826,9 @@ $$
 ## 幂级数展开技巧
 
 **函数侧凑**
+
+**前提，先求收敛域**
+
 $$凑形式展开：\\
 \ln(4x-5)展开成(x-2)的幂级数（即可便捷求出x=2处的高阶导）\\
 \ln(4(x-2)+3)=\ln3(1+\frac{4(x-2)}{3})=\ln3+\ln(1+\frac{4(x-2)}{3})\\
@@ -3911,7 +3915,7 @@ z=\omega(t)
 \end{array}
 \right.\\切向量:
 \boldsymbol{\tau}=(\varphi'(t),\psi'(t),\omega'(t))\\
-切平面:
+法平面:
 \varphi'(t)(x-x_0)+\psi'(t)(y-y_0)+\omega'(t)(z-z_0)=0
 $$
 
@@ -3928,7 +3932,7 @@ F'_x& F'_y&F'_z\\
 G'_x & G'_y&G'_z
 \end{array}
 \right|_{(x_0,y_0,z_0)}\quad （与空间直线方向向量同理）\\
-切平面：......$$
+法平面：......$$
 
 ## 空间曲面的法线与切平面
 
@@ -3943,13 +3947,14 @@ $$梯度：\textbf{grad}\ u\bigg|_{P_0}=(u'_x,u'_y,u'_z)\big|_{P_0}$$
 $$方向导数：\\
 \frac{\partial u}{\partial \boldsymbol{l}}\bigg|_{P_0}=u'_x\cos\alpha+u'_y\cos\beta+u'_z\cos\gamma\big|_{P_0}=\boldsymbol{l^0}\cdot \textbf{grad}\ u\\
 (\cos\alpha,\cos\beta,\cos\gamma)为方向\boldsymbol{l^0}的方向余弦\\
-即梯度向量在单位方向向量\boldsymbol{l^0}上的投影$$
+即梯度向量在单位方向向量\boldsymbol{l^0}上的投影\\
+定义法（偏导不连续时）：\frac{\partial u}{\partial l}=\lim\limits_{t\to0^+}\frac{f(\cos\alpha t+x_0,\cos\beta t+y_0,\cos\gamma t+z_0)-f(x_0,y_0,z_0)}{t}$$
 $$注：方向导数在与梯度同向时取得最大值$$
 
 ## 方向导数取最大值题型
 
 **在某方向向量上取得最大方向导数，即梯度与方向向量同向**
-$$f(x,y,z)=axy^2+byz+cx^3z^2在点P(1,2,-1)处沿z轴正向\boldsymbol{l}取得最大值$$
+$$f(x,y,z)=axy^2+byz+cx^3z^2在点P(1,2,-1)处的方向导数沿z轴正向\boldsymbol{l}取得最大值$$
 $$\textbf{grab}\ f=(f'_x,f'_y,f'_z)\big|_P=\lambda \boldsymbol{l}=\lambda(0,0,1)$$
 **在某曲线（曲面）取得最大方向导数，即梯度取得最大值**
 $$||\textbf{grab}\ f||的条件最值问题$$
@@ -4078,6 +4083,9 @@ $$\cos\alpha=\frac{F'_x}{\sqrt{(F'_x)^2+(F'_y)^2+(F'_z)^2}}\\
 \cos\beta=\frac{F'_y}{\sqrt{(F'_x)^2+(F'_y)^2+(F'_z)^2}}\\
 \cos\gamma=\frac{F'_z}{\sqrt{(F'_x)^2+(F'_y)^2+(F'_z)^2}}$$
 
+$$注：(F'_x,F'_y,F'_z)的内、外法线方向需另判断处理\\
+球面指向为外法线方向$$
+
 ## 二重积分定义式
 
 **最多考区间 x,y∈(0,a)**
@@ -4111,6 +4119,36 @@ $$积分区域\left\{\begin{array}{rl}
 (x-a)^2+(y-b)^2=a^2+b^2&\leftrightarrow \rho=2a\cos \theta+2b\sin\theta
 \end{array}
 \right.$$
+
+## 二重积分广义极坐标变换
+
+$$积分区域D:\frac{x^2}{a^2}+\frac{y^2}{b^2}\leqslant 1\\
+令x = a\rho\cos\theta，y = b\rho\sin\theta\\
+将区域D：\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}\leq1变为D^{\prime}：0\leq \rho\leq1，0\leq\theta\leq2\pi\\
+雅可比行列式 J=\frac{\partial(x,y)}{\partial(r,\theta)}=
+\begin{vmatrix}
+\frac{\partial x}{\partial \rho}&\frac{\partial x}{\partial\theta}\\
+\ \\
+\frac{\partial y}{\partial \rho}&\frac{\partial y}{\partial\theta}\end{vmatrix}=\begin{vmatrix}a\cos\theta&-a\rho\sin\theta\\b\sin\theta&b\rho\cos\theta
+\end{vmatrix}=ab\rho\\
+积分公式\iint_{D}y^{2}dxdy=\iint_{D^{\prime}}(b\rho\sin\theta)^{2}\cdot|J|d\rho d\theta=\int_{0}^{2\pi}d\theta\int_{0}^{1}b^{2}r^{2}\sin^{2}\theta\cdot ab\rho d\rho=\frac{\pi ab^{3}}{4}$$
+
+## 二重积分雅可比换元法
+
+$$D=\{(x,y)|x+y\leqslant 1,x\geqslant 0,y\geqslant 0\}, I =\iint \limits_{D} \frac{e^{-(x+y)}}{\sqrt{xy}}dxdy\\
+换元u=-(x+y),v=x,则\\
+D'=\{(u,v)|-1\leqslant u\leqslant 0, 0\leqslant v\leqslant 1, -1\leqslant u+v\leqslant 0\},\\
+I =\iint \limits_{D'}\frac{e^{-u}}{\sqrt{v(-v-u)}}\begin{vmatrix}
+\frac{\partial x}{\partial u}&\frac{\partial x}{\partial v}\\
+\ \\
+\frac{\partial y}{\partial u}&\frac{\partial y}{\partial v}\end{vmatrix}dudv=\iint \limits_{D'}\frac{e^{-u}}{\sqrt{v(-v-u)}}dudv$$
+
+## 二重积分平移坐标系
+
+$$D=\{(x,y)|(x-1)^2+(y-1)^2\leqslant 1\}, I =\iint f(x,y)dxdy\\
+坐标变换：u=x-1,v=y-1,则\\
+D'=\{(u,v)|u^2+v^2\leqslant 1\}, I =\iint f(u+1,v+1)dudv
+$$
 
 ## 球面坐标转换
 
@@ -4147,9 +4185,9 @@ z=\sqrt{\frac{x^2+y^2}{3}}&\leftrightarrow \varphi=\frac{\pi}{3}
 
 $$曲面微元
 \left\{\begin{array}{l}
-方向与坐标轴方向相同时，处理为dxdy\\
+方向与坐标轴方向相同时，dxdy处理为dxdy\\
 \ \\
-方向与坐标轴方向不同，处理为-dxdy
+方向与坐标轴方向不同，dxdy处理为-dxdy
 \end{array}\right.
 $$
 
@@ -4386,6 +4424,7 @@ $$\int_Lf(x,y)ds$$
 直角坐标、参数方程、极坐标
 
 **第一型曲线积分由一元定积分推广而来**
+
 **平面曲线（各坐标系下有各自的弧微分，并非由换元得到）：**
 $$弧微分：\sqrt{(dx)^2+(dy)^2}\ ,\sqrt{[x'(t)]^2(dt)^2+[y'(t)]^2(dt)^2},\sqrt{[x'(\theta)]^2(d\theta)^2+[y'(\theta)]^2(d\theta)^2}\\
 \sqrt{(dx)^2+(dy)^2}\not\xrightarrow {换元}\sqrt{[x'(t)]^2+[y'(t)]^2}\ dt\\
@@ -4534,7 +4573,7 @@ $$更换积分路径（折线、直线）$$
 ## 线面积分的奇点讨论
 
 $$考研从未出现过怪异奇点，主要为原点，即\frac{1}{x^2+y^2},\frac{1}{x^2+y^2+z^2}\\
-无需担心奇点不可消去问题，遇到奇点情形，首先考虑曲线、曲面方程消去奇点，再择简便方法$$
+无需担心奇点不可消去问题，遇到奇点情形，考虑曲线、曲面方程消去奇点，再择简便方法$$
 
 ## 多元函数积分重要经验
 
@@ -4720,4 +4759,6 @@ $$y_1=\frac{\sin x}{x}为微分方程xy''+2y'+xy=0的一个解，求通解\\
 
 考查尺度有限，不如体系铺展得复杂，梳理轻重点
 
-## 数学整体的考情复核
+## 计算粗心问题
+
+**心思浮躁，不愿深入专注，极易出错**
