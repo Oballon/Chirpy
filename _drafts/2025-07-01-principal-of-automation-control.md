@@ -949,7 +949,9 @@ $$对数特性公式
 
 $$\Delta L(\omega_r)=L(\omega)-L_{渐}(\omega)=20\lg\frac{1}{2\xi\sqrt{1-\xi^2}}>0\quad （仅为谐振时，谐振处的误差）$$
 $$\Delta L(\omega_n)=L(\omega)-L_{渐}(\omega)=20\lg\frac{1}{2\xi}\quad （转折频率处的误差，{\color{blue}无论谐振与否}）$$
-$$注：\text{Bode}图中用来确定\xi$$
+$$注：\text{Bode}图中用来确定\xi\\
+二阶微分环节取负（-20\lg\frac{1}{2\xi\sqrt{1-\xi^2}}、-20\lg\frac{1}{2\xi}）\\
+惯性环节转折处误差为-3dB$$
 
 ## 高阶系统超调量与调节时间的经验公式
 
@@ -1133,7 +1135,7 @@ $$G(s)=\frac{K(\frac{s}{\omega_i}+1)\cdots}{s^v(\frac{s}{\omega_j}+1)\cdots}\\
 各转折频率\omega\\
 截止频率\omega_c\\
 \end{array}\right.\\
-3.低频段延长线及横轴交点(\sqrt[v]{K},0)\quad 注：20\lg K-v\cdot 20\lg\omega=0$$
+3.低频段延长线及横轴交点(\sqrt[v]{K},0)\quad 注：\frac{K}{\omega^v}=1$$
 
 ## 截止频率计算方法
 

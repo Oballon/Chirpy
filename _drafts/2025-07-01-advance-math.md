@@ -3320,7 +3320,8 @@ $$r_i\left\{
 \\
 复根 \alpha\pm\beta i（对数）\quad e^\alpha[(C_0+C_1x+\cdots+C_{n-1}x^{n-1})\sin\beta x+(D_0+D_1x+\cdots+D_{n-1}x^{n-1})\cos\beta x]
 \end{array}
-\right.$$
+\right.\\
+注：若根为0， [C_0+C_1x+C_2x^2+\cdots]$$
 
 ## 高阶常系数非齐次线性微分方程的特解
 $$y^{(n)}+a_1y^{(n-1)}+\cdots+a_{n-1}y'+a_ny=f(x)$$
