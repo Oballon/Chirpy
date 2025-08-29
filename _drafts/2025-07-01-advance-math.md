@@ -396,7 +396,7 @@ $$y=\ln(x+\sqrt{1+x^2})$$
 $$\left\{
 \begin{array}{}
 \sqrt{1+x^2}+x=e^y\\
-\sqrt{1+x^2}-x=e^{-y}\\
+\sqrt{1+x^2}-x=e^{-y}（等式两端取倒数）\\
 \end{array}
 \right.联立求解$$
 
@@ -549,7 +549,8 @@ $$显式：
 \lim\limits_{x\to0}\frac{(3+2\tan x)^x-3^x}{3\sin^2x+x^3\cos\frac{1}{x}}, 分母\lim\limits_{x\to0}\frac{x^3\cos\frac{1}{x}}{3\sin^2x}=0$$
 
 ## 非零因子常数化
-（加减乘除，变上限积分）
+
+仅变上限积分
 
 <!-- **关键在于不定式** -->
 加减慎用（相消项决定）；若无加减，乘除直接用
@@ -560,7 +561,8 @@ $$非零因子常数化：\\
 \int_0^{h(x)}f(t)dt\sim Ah(x)$$
 
 ## 等价无穷小替换
-（加减乘除，复合函数，变上限积分）
+
+仅变上限积分
 
 <!-- **关键在于不定式** -->
 加减慎用（相消项决定）；若无加减，乘除直接用、复合函数（复合函数各层均无穷小的前提下，由外向内替换）
@@ -2809,11 +2811,11 @@ $$例：\\
 
 ## 特殊反常积分
 
-$$I=\int_0^{+\infty}e^{-x^2}dx$$
+$$I=\int_0^{+\infty}e^{-x^2}dx=\frac{\sqrt{\pi}}{2}$$
 
-$$I=\int_0^{+\infty}e^{-x^2}dx\\
-I^2=\int_0^{+\infty}e^{-x^2}dx\int_0^{+\infty}e^{-y^2}dy\\
-=\iint\limits_{D} e^{-r^2}rdrd\theta\\
+$$
+I^2=\int_0^{+\infty}e^{-x^2}dx\int_0^{+\infty}e^{-y^2}dy
+=\iint\limits_{D} e^{-r^2}rdrd\theta
 =\frac{1}{2}\int_0^{\frac{\pi}{2}}d\theta\int_0^{+\infty}e^{-r^2}d(r^2)=\frac{\pi}{4}
 $$
 $$故I=\frac{\sqrt{\pi}}{2}$$
@@ -3178,7 +3180,7 @@ $$注：导函数可能用定义求得$$
 
 应用题型微分关系形成微分方程.......
 
- 优先级：一阶线性 > 分离变量型 > 齐次型
+**优先级：一阶线性 > 分离变量型 > 齐次型**
 
  微分方程只考求解，按习惯计算即可，勿多想
 
@@ -3202,10 +3204,7 @@ $$\frac{dy}{dx}=\varphi(\frac{y}{x})$$
 $$\frac{dy}{dx}=\varphi(\frac{y}{x}):\\
 令u=\frac{y}{x},得y=ux,\frac{dy}{dx}=x\frac{du}{dx}+u\\
 x\frac{du}{dx}+u=\varphi(u)$$
-$$或\frac{dx}{dy}=\psi(\frac{x}{y}):
-......$$
-$$注：(\frac{y}{x})为0次\\
-类型不明显，向标准形式(dy/dx)化
+$$注：(\frac{y}{x})为0次
 $$
 
 ## 一阶线性微分方程
@@ -3334,6 +3333,11 @@ $$f(x)=e^{\alpha x}[P_m(x)\cos\beta x+P_n(x)\sin\beta x]时，y^*=e^{\alpha x}[Q
 l=\max\{m,n\}\qquad
 k=(\alpha\pm\beta i等于特征根)的对数$$
 可能考查[积化和差、和差化积](#积化和差、和差化积)
+
+## 微分方程重要经验
+
+$$灵活处理为\frac{dx}{dy}=\psi(\frac{x}{y})\\
+类型不明显，向标准形式(dy/dx)化$$
 
 ## 解特征根注意
 $$(x-1)^3=0,\  x^3-1=0$$
@@ -3563,10 +3567,10 @@ $$\sum_{n=1}^{\infty}\frac{1}{n^p}\left\{
 ## 比较判别法的极限形式
 
 **级数判敛的核心方法**
-$$正项级数\sum_{n=0}^{\infty}u_n$$
-$$\lim\limits_{n\to \infty}\frac{u_n}{(\frac{1}{n})^p}=A\neq0，则\sum_{n=1}^{\infty} u_n与\sum_{n=1}^{\infty} (\frac{1}{n})^p同敛散$$
-$$\lim\limits_{n\to \infty}\frac{u_n}{(\frac{1}{n})^p}=\infty,且p\leqslant1,则发散$$
-$$\lim\limits_{n\to \infty}\frac{u_n}{(\frac{1}{n})^p}=0,且p>1,则收敛$$
+$$正项级数\sum_{n=0}^{\infty}u_n\quad \quad $$
+$$\lim\limits_{n\to \infty}\frac{u_n}{v_n}=A\neq0，则\sum_{n=1}^{\infty} u_n与\sum_{n=1}^{\infty}v_n同敛散$$
+$$\lim\limits_{n\to \infty}\frac{u_n}{b_n}=\infty,且\sum_{n=0}^{\infty}b_n发散,则发散$$
+$$\lim\limits_{n\to \infty}\frac{u_n}{a_n}=0,且\sum_{n=0}^{\infty}a_n收敛,则收敛$$
 
 ## 比值判别法与根值判别法
 
@@ -3682,7 +3686,7 @@ $$\sum_{n=0}^{\infty}a_nx^n
 
 ## 和函数性质
 
-$$S(x)在收敛域上连续$$
+$$S(x)在收敛域上连续，收敛域即为和函数定义域$$
 
 ## 幂级数展开式
 $$e^x,\ln(1+x),\quad \frac{1}{1+x},\frac{1}{1-x},\quad \sin x,\cos x,\quad \arctan x$$
@@ -3797,7 +3801,7 @@ $$通项“+1”，下标“-1”\\
 
 $$
 $$求导后未出现无效项，无需改变下标\\
-无效项：阶乘(-b)!\quad x^k(k< 0)$$
+无效项：无效a_n\quad 阶乘(-b)!\quad x^k(k< 0)$$
 **首先计算幂级数收敛域并标注**
 **使用级数公式时，注意标注收敛域**
 $$配\frac{1}{x^k}时，注意讨论\left\{\substack{x=0\\x\neq0}\right.$$
@@ -3810,13 +3814,12 @@ $$配\frac{1}{x^k}时，注意讨论\left\{\substack{x=0\\x\neq0}\right.$$
 $$形式处理：裂项、拆分、凑已知展开式等\quad{\color{blue}关键：配凑单次因式（仅单次因式可被“积”“导”处理）}\\
 例：\sum_{n=0}^{\infty}\frac{4n^2+4n+3}{2n+1}x^{2n},\quad\sum_{n=0}^{\infty}(-1)^{n-1}[1+\frac{1}{n(2n-1)}]x^{2n},\quad \sum_{n=0}^{\infty}\frac{1+n^2}{n!\cdot2^n}x^n,\quad \sum_{n=0}^{\infty}(-1)^n\frac{n+1}{(2n+1)!}x^{2n+1}$$
 $$先积后导：\sum_{n=1}^{\infty} nx^{n-1}=\sum_{n=1}^{\infty}(x^n)'=(\sum_{n=1}^{\infty}x^n)'=S(x)\\
-先导后积：\sum_{n=1}^{\infty}\int_0^x(\frac{1}{n}x^n)'dx=\int_0^x\sum_{n=1}^{\infty}x^{n-1}dx=S(x)-S(0)\\
+先导后积：\sum_{n=1}^{\infty}\int_0^x(\frac{1}{n}x^n)'dx=\int_0^x\sum_{n=1}^{\infty}x^{n-1}dx=\underbrace{S(x)-S(0)}_{S(x)+C-[S(0)+C]}\\
 \ \\
-注：
-\begin{array}{l}
+注：\\
 若整体求导、积分，求导、积分符号可直接放至\sum内外，否则不可\\
 “高次”型中间增设S_1(x)，提取\frac{1}{x}或x等后的展开式，设为S_1(x)
-\end{array}$$
+$$
 $$微分方程：\\
 1. 已知数列递推式，勿解通项，幂级数求导、积分可构造微分方程\\
 (n+1)a_{n+1}=na_n+a_{n-1}（统一累加下限即可），根据a_n关系构造对应幂级数，可得S(x)的关系方程\\
@@ -4132,7 +4135,7 @@ $$积分区域D:\frac{x^2}{a^2}+\frac{y^2}{b^2}\leqslant 1\\
 \ \\
 \frac{\partial y}{\partial \rho}&\frac{\partial y}{\partial\theta}\end{vmatrix}=\begin{vmatrix}a\cos\theta&-a\rho\sin\theta\\b\sin\theta&b\rho\cos\theta
 \end{vmatrix}=ab\rho\\
-积分公式\iint_{D}y^{2}dxdy=\iint_{D^{\prime}}(b\rho\sin\theta)^{2}\cdot|J|d\rho d\theta=\int_{0}^{2\pi}d\theta\int_{0}^{1}b^{2}r^{2}\sin^{2}\theta\cdot ab\rho d\rho=\frac{\pi ab^{3}}{4}$$
+积分公式\iint_{D}y^{2}dxdy=\iint_{D^{\prime}}(b\rho\sin\theta)^{2}\cdot|J|d\rho d\theta=\int_{0}^{2\pi}d\theta\int_{0}^{1}b^{2}\rho^{2}\sin^{2}\theta\cdot ab\rho d\rho=\frac{\pi ab^{3}}{4}$$
 
 ## 二重积分雅可比换元法
 
@@ -4223,7 +4226,7 @@ $$L 取正向，即左手始终在 L 所围成区域 D 内；\quad
 单连通、多连通（复连通）区域均成立$$
 $$注：{\color{blue}边界奇点也应挖去}\\
 挖奇点处理后，封闭曲线方向处理为外逆内顺（均在左手）\\
-\oint\limits_{L+L_1}-\oint\limits_{L_1}\qquad或\qquad-\left[\oint\limits_{L^-+L_1}-\oint\limits_{L_1}\right]$$
+\iint\limits_{D}-\oint\limits_{L_1}\qquad 或\qquad-\iint\limits_{D}-\oint\limits_{L_1}$$
 
 ## 高斯公式
 
@@ -4232,7 +4235,7 @@ $$\oiint\limits_{\textbf{S}}Pdydz+Qdzdx+Rdxdy=\iiint\limits_{\Omega}(\frac{\part
 $$\textbf{S}是\Omega的整个边界{\color{blue}曲面外围}；\quad 单连通、多连通（复连通）区域均成立$$
 $$注：{\color{blue}边界奇点也应挖去}\\
 挖奇点处理后，封闭曲面方向侧处理为外外内内\\
-\oiint\limits_{\mathbf{S}+\mathbf{S_1}}-\oiint\limits_{\mathbf{S_1}}\qquad或\qquad-\left[\oiint\limits_{\mathbf{S^-}+\mathbf{S_1}}-\oiint\limits_{\mathbf{S_1}}\right]$$
+\iiint\limits_{\Omega}-\oiint\limits_{\mathbf{S_1}}\qquad 或\qquad-\iiint\limits_{\Omega}-\oiint\limits_{\mathbf{S_1}}$$
 
 ## 斯托克斯公式
 
@@ -4626,12 +4629,22 @@ $$\iint\limits_{D}\max\{2x-y,1\}d\sigma\\
 
 ## 曲线的参数方程转化
 
-**圆、椭圆的参数方程转化（空间曲线无法参数化）：**
+**圆、椭圆的参数方程转化：**
 $$\begin{array}{ccccc}
 (\frac{x}{2})^2&+&(\frac{y}{3})^2&=2\\
 \downarrow&&\downarrow\\
-\sqrt{2}\sin t&&\sqrt{2}\cos t
+\sqrt{2}\sin t&&\sqrt{3}\cos t
 \end{array}$$
+$$\left\{\begin{array}{}
+x^2+y^2+z^2=1\\
+x=y
+\end{array}\right.
+\longrightarrow 
+\left\{\begin{array}{ccccc}
+x=y=\frac{1}{\sqrt{2}}\sin t\\
+z=\cos t
+\end{array}\right.\\
+（若为三维，平面须平行于某一坐标轴）$$
 **直线的参数方程转化：**
 $$\frac{x-x_1}{x_2-x_1}=\frac{y-y_1}{y_2-y_1}=\frac{z-z_1}{z_2-z_1}=t$$
 

@@ -827,6 +827,10 @@ Nichols图、等M圆法不考
 
 $$G(s)=\frac{K(\frac{s}{\omega_1}+1)(-\frac{s}{\omega_2}-1)}{s^v(-\frac{s}{\omega_3}+1)(\frac{s}{\omega_3}-1)[(\frac{s}{\omega_4})^2+bs+1]}（便于得知转折频率\omega_i\quad \omega_i>0，且K>0）$$
 
+## 频率分析特点 
+
+由开环频率特性分析**负反馈**闭环特性
+
 ## 正、余弦输入下的稳态输出
 
 $$y(t)=|\Phi(j\omega_0)|\sin[\omega _0t+\theta+\angle\Phi(j\omega_0)]{\color{blue}（仅代表稳态输出）}\\
@@ -838,8 +842,6 @@ $$y(t)=|\Phi(j\omega_0)|\sin[\omega _0t+\theta+\angle\Phi(j\omega_0)]{\color{blu
 $$注：\cos(\omega_0 t+\theta)与\sin(\omega_0 t+\theta)同理，直接代入幅值比、相角差即可$$
 
 ## 频域基本概念
-
-**由开环频率特性分析负反馈闭环特性**
 
 $$正弦输入r(t)=\sin\omega t下，c_{ss}(t)=|G(j\omega)|\sin(\omega t+\angle{G(j\omega)}){\color{blue}（稳态输出）}\\
 频率特性（{\color{blue}以复数向量处理-关键}）：
@@ -908,19 +910,21 @@ $$N=N_+-N_- \\
 ## 幅值裕度与相角裕度
 
 $${\color{blue}分析1+G(j\omega)H(j\omega)对原点的“包围性”以判断负反馈闭环系统的稳定性}$$
-$$相角裕度：\gamma=180\degree+\angle[G_1(j\omega_c)H(j\omega_c)]\qquad(|G_1(j\omega_c)H(j\omega_c)|=A(\omega_c)=1)\\
-注：以近似A(\omega_c)计算，即
+$$相角裕度：\gamma=180\degree+\angle[G_1(j\omega_c)H(j\omega_c)]\\
+(|G_1(j\omega_c)H(j\omega_c)|=A(\omega_c)=1)\\
+注：矫正时以近似A(\omega_c)计算，即
 \text{Bode}图\omega_c处\\
-部分特殊题型以准确A(\omega)为准（灵活判断）
+其余以准确A(\omega)为准（灵活判断）
 $$
 $$幅值裕量：K_g=\frac{1}{|G_1(j\omega_g)H(j\omega_g)|}=\frac{1}{A(\omega_g)}\qquad (\varphi(\omega_g)=-180\degree)\\
 增益裕量GM=-20\lg|G_1(j\omega_g)H(j\omega_g)|=-20\lg A(\omega_g)\quad 越大越稳定（幅频特性L(\omega_g),A(\omega_g)越小越好）\\
-注：以近似A(\omega_g)计算
+注：以准确A(\omega_g)计算
 $$
 $$\arctan A\pm\arctan B=\theta\rightarrow
 \frac{A\pm B}{1\mp A B}=\tan\theta\\
 \rightarrow \arctan A\pm\arctan B= \arctan\frac{A\pm B}{1\mp AB}$$
-$$注：\left\{\begin{array}{}K_g=1&临界稳定\\K_g>1&稳定\end{array}\right.\qquad
+$$注：
+\left\{\begin{array}{}K_g=1&临界稳定\\K_g>1&稳定\end{array}\right.\qquad
 \left\{\begin{array}{}\gamma=0&临界稳定\\\gamma>0&稳定\end{array}\right.\\相角裕度、幅值裕度判稳，非普适性方法，但考研不涉及失效情形$$
 
 ## 二阶闭环频域特性及性能
@@ -932,7 +936,8 @@ $$\Phi(s)=\frac{\omega_n^2}{s^2+2\xi \omega_ns+\omega_n^2}\\
 带宽频率：\omega_b=\omega_n\sqrt{1-2\xi^2+\sqrt{2+4\xi^4-4\xi^2}}\qquad \xi\uparrow \rightarrow \omega_b\uparrow\quad \omega_n\uparrow \rightarrow \omega_b\uparrow\\
 注：|\Phi(j\omega_b)|=0.707|\Phi(j0)|\\
 $$
-$$注：动态性能以时域分析为准\\
+$$注：M_r=\frac{1}{\sin\gamma}（高阶系统近似公式）\\
+动态性能以时域分析为准\\
 高阶闭环频域特性与动态性能之间关系过于复杂，不考查$$
 
 ## 二阶开环频域特性及闭环性能
@@ -953,7 +958,7 @@ $$注：\text{Bode}图中用来确定\xi\\
 二阶微分环节取负（-20\lg\frac{1}{2\xi\sqrt{1-\xi^2}}、-20\lg\frac{1}{2\xi}）\\
 惯性环节转折处误差为-3dB$$
 
-## 高阶系统超调量与调节时间的经验公式
+## 高阶系统经验公式
 
 **系统校正性能指标转化关键**
 $$\sigma=0.16+0.4(\frac{1}{\sin\gamma}-1)\\
@@ -1135,7 +1140,9 @@ $$G(s)=\frac{K(\frac{s}{\omega_i}+1)\cdots}{s^v(\frac{s}{\omega_j}+1)\cdots}\\
 各转折频率\omega\\
 截止频率\omega_c\\
 \end{array}\right.\\
-3.低频段延长线及横轴交点(\sqrt[v]{K},0)\quad 注：\frac{K}{\omega^v}=1$$
+3.低频段延长线及横轴交点(\sqrt[v]{K},0)\quad \frac{K}{\omega^v}=1\\
+注：\omega_c 已知时，估值A(\omega_c)=1方便解K\\
+灵活推广（坐标点）：A(\omega_1)=10dB$$
 
 ## 截止频率计算方法
 
@@ -1216,7 +1223,8 @@ A(\omega_c)=1
 G(s)=\frac{K}{(\tau s+1)^3},\quad \gamma(\omega_c)=45\degree，求K\left\{\begin{array}{l}
 \gamma(\omega_c)=180\degree-3\arctan\tau\omega=45\degree\Rightarrow\omega=\frac{1}{\tau}\\
 A(\omega_c)=\frac{K}{\sqrt{(j\frac{1}{\tau}\cdot\tau)^2+1^2}^3}=\frac{K}{\sqrt{2}^3}=1
-\end{array}\right.
+\end{array}\right.\\
+注：用精确A(\omega)计算
 $$
 
 ## 对数稳定判据典例
