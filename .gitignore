@@ -27,3 +27,6 @@ package-lock.json
 # Misc
 _sass/vendors
 assets/js/dist
+
+# Export cache
+# _draft-structure/**/out*
